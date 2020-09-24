@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-09-24T04:08:31Z",
+  "id": "blockchain-self-paced",
+  "duration": 565,
+  "title": "BlockchainDev Workshop",
+  "authors": "Adithya, Alicia, QZ, Shyam",
+  "summary": "Blockchain Self-Paced Content for OpenNodes Campus collective",
+  "source": "1W3RkP2itM0KOTMQIy0A2V53MVBzVoQFqpegnvjaj5DQ",
+  "theme": "workshop-content",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Workshop content"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "blockchain-self-paced"
+}

@@ -1,0 +1,1704 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>BlockchainDev Workshop</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="blockchain-self-paced"
+                  title="BlockchainDev Workshop"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="5">
+        <p>In addition to this self-paced content, we have also put together this roadmap for you which you can access <a href="https://miro.com/app/board/o9J_kno-w3s=/" target="_blank">here</a>. </p>
+<p>The basic idea of having the roadmap in place is so that you could get an idea on where you currently stand in your journey of self-discovery and chart out your course accordingly! How it works is that, you would first be expected to learn the fundamental concepts of Blockchain technology and Bitcoin. Once you have mastered this, you could go on to deep dive into Blockchain Development by learning the tools necessary to build apps on <a href="https://ethereum.org/en/" target="_blank">Ethereum</a>, <a href="https://www.hyperledger.org/" target="_blank">Hyperledger</a> and<a href="https://www.zilliqa.com/" target="_blank"> Ziliqa</a>! Just follow the path that eventually terminates to a terminal-node where you will be provided with the links to read more about the specific topic at hand. </p>
+<aside class="warning"><p>This box is for Warnings/ Things to take note</p>
+</aside>
+<aside class="special"><p>This box is for things good to know</p>
+</aside>
+<google-codelab-survey survey-id="blockchain-self-paced-1">
+<h4>This is for feedback</h4>
+<paper-radio-group>
+<paper-radio-button>Yes</paper-radio-button>
+<paper-radio-button>No</paper-radio-button>
+</paper-radio-group>
+</google-codelab-survey>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Syllabus Overview" duration="5">
+        <p>[TODO]</p>
+<p>Explain what will be taught at each stage</p>
+<p>Include a simple test whether people are ready to move to the next stage</p>
+<p>(later) provide direct links to the stage and the tests so people can self-assess where they are at</p>
+<p>Every concept will follow this format: </p>
+<ol type="1" start="1">
+<li><strong>What</strong> this concept is summarised into a sentence or two</li>
+<li><strong>Issues</strong> that make it challenging to achieve this concept in practice or some other effects it might cause</li>
+<li><strong>Why</strong> this is important</li>
+<li><strong>How</strong> this concept is achieved in blockchain technology explained through examples</li>
+<li><strong>Which </strong>examples currently exist</li>
+<li>10 minutes for questions and further discussion</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="P1.1: Decentralisation" duration="20">
+        <aside class="warning"><p>Terms</p>
+<p>Peers - individuals that make up the network</p>
+<p>Consensus - the method that peers use to agree on the state of the network</p>
+<p>Ethereum - the second-largest cryptocurrency platform by market capitalization, behind Bitcoin</p>
+<p>Simple Payment Verification (SPV) - a method of verifying whether particular transactions are included in the block without downloading the entire block</p>
+</aside>
+<h2 is-upgraded>What</h2>
+<p><em>All  power is distributed and dispersed away from a central authority. Most financial and government systems currently in existence are centralized, which means that in such systems there exists a central authority that is incharge of maintaining and managing them.</em></p>
+<p class="image-container"><img style="width: 547.00px" src="img\6c8198d9ca047649.png"></p>
+<p><em>There are several forms of decentralisation with varying degrees for each form leading to different properties and tradeoffs.</em></p>
+<p>You can be decentralised in terms of architecture, culture, control, and decision-making.</p>
+<ul>
+<li>Architecture sets forth the different roles of network participants and how they interact. A highly decentralised architecture will ensure that all peers  have the exact same role and thus exert the same level of influence. A centralised architecture would give a single peer near full control of the network while other participants may only interact with it in limited ways. This can also affect the consensus protocols peers use.</li>
+<li>Culture defines the social norms of the people that interact with the network. This could be in terms of the developers that build the software of the network, developers that build applications on the network, researchers that explore the potential and pitfalls of the network, and anyone that essentially has a stake in it.</li>
+<li>Control of the network can be done in several ways but ultimately resulting in the governing of the network&#39;s participants. This may involve legal structures as to how the network is funded or the amount of changes each peer can make on the network itself.</li>
+<li>Decision-making processes determine the growth of each network and help in the weighing of trade-offs that might have to be taken. As the technology is new, there are challenges that are unsolved and unforeseen. Having a robust decision-making process is important to ensure that the network can evolve to adapt to each challenge, social or technical.</li>
+</ul>
+<p><em>This concept is fundamental to blockchain technology as it is its key value proposition for most use cases.</em></p>
+<p>Decentralization can be viewed from a blockchain perspective as a mechanism that provides a way to remodel existing applications and paradigms or build new applications in order to give full control to users. There are conflicting ideas on the importance of decentralisation but most agree that it removes the need for trust when parties collaborate. This gives rise to new types of goods and services that are still untested.</p>
+<h2 is-upgraded>Issues</h2>
+<p>Scaling – there are challenges in keeping a network decentralized if one intends to scale. A common problem is the transaction speed, which plagued Ethereum for quite a while. Some solutions involve lowering levels of decentralization as a tradeoff for faster transactions, but it fundamentally lowers the level of security of the network due to the need for trusted parties (eg. Supernodes)</p>
+<p>Economics – as a network grows, one cannot predict how its peers might interact when utilising the resources a network provides. This might lead to levels of centralization in a network. (Mining power centralization, Centralised exchanges)</p>
+<h2 is-upgraded>Why</h2>
+<ol type="1" start="1">
+<li>It allows for greater participation between non-trust parties</li>
+<li>Better reliability in your network as you do not rely on central intermediaries (uptime, processes etc)</li>
+</ol>
+<h2 is-upgraded>How</h2>
+<p>Using the forms of decentralisation as a guide:</p>
+<ol type="1" start="1">
+<li>Architecture</li>
+</ol>
+<p>Bitcoin - Full nodes, Light Nodes.</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p>Full Nodes</p>
+</td><td colspan="1" rowspan="1"><p>Light Nodes</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><ul>
+<li>Fully validates transactions and blocks.</li>
+<li>Help the network by:</li>
+<li>Accepting transactions and blocks from other full nodes </li>
+<li>Validating those transactions and blocks</li>
+<li>Relaying them to further full nodes.</li>
+</ul>
+</td><td colspan="1" rowspan="1"><ul>
+<li>Downloads the block header and not the entire blockchain only to validate the authenticity of the transactions</li>
+<li>Makes use of a method called Simple Payment Verification (SPV) to verify transactions</li>
+</ul>
+</td></tr>
+</table>
+<p>Hyperledger Fabric - Client, Peer, Orderer</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p>Client</p>
+</td><td colspan="1" rowspan="1"><p>Peer</p>
+</td><td colspan="1" rowspan="1"><p>Orderer</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Submits an actual transaction-invocation to the endorsers, and broadcasts transactions-proposals to the orderer</p>
+</td><td colspan="1" rowspan="1"><p>A node that commits transactions and maintains the state and copy of the ledger. Can also have a special endorser role</p>
+</td><td colspan="1" rowspan="1"><p>Node running the communication service that implements a delivery guarantee</p>
+</td></tr>
+</table>
+<ol type="1" start="2">
+<li>Culture</li>
+</ol>
+<p><a href="https://opensource.com/resources/what-open-source" target="_blank">Open source</a> - an ethos that values collaborating on community projects</p>
+<p>Linux Foundation - arguably the most successful open source foundation. Their involvement in blockchain is through the Hyperledger project.</p>
+<ol type="1" start="3">
+<li>Control</li>
+</ol>
+<p><a href="https://ethereum.org/en/foundation/#:~:text=The%20Ethereum%20Foundation%20(EF)%20is,supporting%20Ethereum%20and%20related%20technologies.&text=Their%20role%20is%20not%20to,development%20of%20Ethereum%2Drelated%20technologies." target="_blank">Ethereum Foundation</a> - incorporated as a Swiss non-profit at Zug, Switzerland. Provides <a href="https://blog.ethereum.org/2018/08/17/ethereum-foundation-grants-update-wave-3/" target="_blank">Ethereum Grants</a> that pay for teams that work on projects.</p>
+<ol type="1" start="4">
+<li>Decision-making</li>
+</ol>
+<p><a href="https://ethereum.org/en/eips/" target="_blank">Ethereum Improvement Proposals (EIPs)</a> - are standards specifying potential new features or processes for Ethereum. EIPs contain technical specifications for the proposed changes and act as the &#34;source of truth&#34; for the community. Network upgrades and application standards for Ethereum are discussed and developed through the EIP process. This is currently how all decisions are made.</p>
+<h2 is-upgraded>Which</h2>
+<p class="image-container"><img style="width: 624.00px" src="img\359fa5095a0e3047.png"></p>
+<p>Self-sovereign identity where users can manage your own reputation, data, and digital assets</p>
+<p><em>ID2020 </em>- supports digital identity programs across the world</p>
+<p><em>uPort</em> - build tools for decentralised identity data management</p>
+<p>Decentralised exchanges that requires no central coordinating party and all participants interact based on incentives</p>
+<p><em>Kyber Network</em></p>
+<p class="image-container"><img style="width: 602.00px" src="img\a0393350c17452f.png"></p>
+<p>Decentralised Autonomous Organisations allow participants to carry out democratic processes without trusting any particular institution as a central party. This could be through decentralised means to propose ideas, vote on ideas, making decisions for the organisation or individuals all carried out through smart contracts.</p>
+<p><em>MakerDAO </em>- provides a stable digital currency. The DAO sets the ‘stability fee&#39;, ‘collateralization ratio&#39; and triggers an ‘emergency shutdown&#39; if needed.</p>
+<aside class="special"><p>References used for this concept</p>
+<p>1. <a href="https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274" target="_blank">https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274</a></p>
+<p>2. <a href="https://en.bitcoin.it/wiki/Network" target="_blank">htps://en.bitcoin.it/wiki/Network</a></p>
+<p>3. <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/arch-deep-dive.html" target="_blank">https://hyperledger-fabric.readthedocs.io/en/release-1.4/arch-deep-dive.html</a></p>
+<p>4. <a href="https://redhat-documentation.github.io/community-collaboration-guide/" target="_blank">https://redhat-documentation.github.io/community-collaboration-guide/</a></p>
+<p>5. <a href="https://id2020.org/resources" target="_blank">https://id2020.org/resources</a></p>
+<p>6. <a href="https://www.uport.me/" target="_blank">https://www.uport.me/</a></p>
+<p>7. <a href="https://kyber.network/" target="_blank">https://kyber.network/</a></p>
+<p>8.<a href="https://hackernoon.com/whats-makerdao-and-what-s-going-on-with-it-explained-with-pictures-f7ebf774e9c2" target="_blank">https://hackernoon.com/whats-makerdao-and-what-s-going-on-with-it-explained-with-pictures-f7ebf774e9c2</a></p>
+<p>9. <a href="https://cointelegraph.com/tags/decentralization" target="_blank">https://cointelegraph.com/tags/decentralization</a></p>
+<p>10.<a href="https://bitcoin.org/en/full-node#what-is-a-full-node" target="_blank"> https://bitcoin.org/en/full-node#what-is-a-full-node</a></p>
+<p>11. <a href="https://ethereum.org/en/eips/" target="_blank">https://ethereum.org/en/eips/</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="P1.2: Immutability" duration="20">
+        <aside class="warning"><p>Terms</p>
+<p>Fork - change to the protocol or a  divergence from previous version of blockchain.</p>
+<p class="image-container"><img style="width: 582.50px" src="img\a54cd96c7f65f9c7.jpeg"></p>
+<p>Blockchain explorer - a tool to traverse blockchain records</p>
+<p>Hashing - one-way function generating values from a string of text. It has preimage resistance (hard to find x given a H(x)), second preimage resistance (hard to find x&#39; such that H(x)==H(x&#39;)) and collision resistance (where H(x)==H(y)).</p>
+<p class="image-container"><img style="width: 602.00px" src="img\612749f1d7dbac34.png"></p>
+<p>Block structure - describes the agreed upon structure of each block in the blockchain by its peers</p>
+<p class="image-container"><img style="width: 602.00px" src="img\b84b8f2371996e9d.png"></p>
+<p>Fungible – being something of such a nature that one part or quantity may be replaced by another equal part or quantity in paying a debt or settling an account</p>
+<p>Nonce - an abbreviation for &#34;number only used once,&#34; which is a number added to a hashed—or encrypted—block in a blockchain that, when rehashed, meets the difficulty level restrictions. They are the numbers that miners are solving for. </p>
+</aside>
+<h2 is-upgraded>What</h2>
+<p><em>All interaction is made reliable by making it unchangeable by any single party, ensuring that activity records and network participation rules are agreed and kept until all necessary parties agree to change them.</em></p>
+<p>The structure of the blockchain itself affords the ability for individuals to independently verify the current state of the network. Each peer can compute the blockchain records for themselves to replicate the changes in the state of the network. A malicious peer will have to compute the consensus protocol for blocks already mined and then outcompete all the miners and broadcast their blocks first to every peer.</p>
+<p>Consensus protocols cannot be easily changed and require a fork.</p>
+<p>A fork can also be used to roll back records but it requires most peers to agree to the fork.</p>
+<p><em>This makes digital goods act like real physical goods and not just a digital representation.</em></p>
+<p>When records can no longer be easily changed by any single party, this creates a new type of good that is purely digital. This is because previously, people could simply make copies and replicate the good, thus no digital good is scarce. The immutability of the records achieved through decentralisation means that the state of such a good must be agreed upon by the entire network, analogous to physical goods that can be verified independently through sight or touch.</p>
+<h2 is-upgraded>Issues</h2>
+<p>Hard forks - rewriting large portions of the blockchain means that records are not absolutely immutable</p>
+<p>Irreversibility - wrong actions once accepted and confirmed by the network cannot be easily reversed. Data on the blockchain will stay on the blockchain. Vulnerable smart contracts can be easily decompiled and exploited. The infamous <a href="https://pastebin.com/CcGUBgDG" target="_blank">DAO attacker left his message</a> to the Ethereum Community. <a href="https://www.etherchain.org/tx/d3d4483662185863cde4326ccf5205204adbcda33468587e8153de3fb83a9a37" target="_blank">See it for yourself</a> in the blockchain explorer where multiple transactions were made resulting in a loss of $70M.</p>
+<h2 is-upgraded>Why</h2>
+<ol type="1" start="1">
+<li>Sets forth a new paradigm by no longer requiring record-keeping intermediaries</li>
+<li>Overcomes the need for trust in records kept as you can verify independently</li>
+</ol>
+<h2 is-upgraded>How</h2>
+<p>In Blockchain systems, the transactions that are verified are embedded with a time stamp that are secured through hashes. The hash of any new record links together and incorporates the hash of the previous record. Through this we get a chronological chain that joins each block.</p>
+<p>Since the entire hashing process always includes the metadata of the previous block while generating a hash for any new block, an &#34;unbreakable&#34; link between the block and the chain is established. After this no further modifications [such as deletion and alteration] can be made to the block that has been included in the chain. If anyone does attempt this, subsequent blocks of the blockchain do not accept the modification as the hash of the block wouldn&#39;t be valid anymore. </p>
+<p>In Summary:</p>
+<p>New records - keep the hash of the previous block and a unique nonce, miners compete to find the nonce for the next block </p>
+<p>Old records -  easily verified that previous blocks are correct by hashing the blocks and checking that the nonces are correct</p>
+<h2 is-upgraded>Which</h2>
+<p><a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">ERC721</a> -  To emulate rare, collectible items with Ethereum tokens by making these tokens non-fungible.</p>
+<p><a href="https://cointelegraph.com/explained/erc-20-tokens-explained" target="_blank">ERC20</a> - Allows smart contracts to act very similarly to a conventional cryptocurrency so that this, hosted on the Ethereum blockchain, can be sent, received, checked of its total supply and checked for the amount that is available on an individual address.</p>
+<aside class="special"><p>References used for this concept</p>
+<p>1. <a href="https://hackernoon.com/blockchain-forks-b0dca84db0b0" target="_blank">https://hackernoon.com/blockchain-forks-b0dca84db0b0</a></p>
+<p>2. <a href="https://www.coindesk.com/understanding-dao-hack-journalists" target="_blank">https://www.coindesk.com/understanding-dao-hack-journalists</a></p>
+<p>3. <a href="https://medium.com/crypto-currently/the-anatomy-of-erc721-e9db77abfc24" target="_blank">https://medium.com/crypto-currently/the-anatomy-of-erc721-e9db77abfc24</a></p>
+<p>4. <a href="https://medium.com/blockchannel/the-anatomy-of-erc20-c9e5c5ff1d02" target="_blank">https://medium.com/blockchannel/the-anatomy-of-erc20-c9e5c5ff1d02</a></p>
+<p>5.<a href="https://dzone.com/articles/a-guide-to-blockchain-immutability-and-chief-chall#:~:text=Immutability%20can%20be%20defined%20as,principle%20or%20a%20hash%20value." target="_blank">https://dzone.com/articles/a-guide-to-blockchain-immutability-and-chief-chall#:~:text=Immutability%20can%20be%20defined%20as,principle%20or%20a%20hash%20value.</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="P1.3: Traceability" duration="20">
+        <aside class="warning"><p>Terms</p>
+<p>Address - A blockchain address is similar to an email address which is used to receive and send funds/transaction on the blockchain network</p>
+<p>Mining - is a process through which new bitcoins are launched onto the market. People that are in charge are the &#34;miners&#34; and they work with powerful computers to solve complex mathematical problems to validate transactions.  </p>
+</aside>
+<h2 is-upgraded>What</h2>
+<p><em>The ability to hide the link between transactions and addresses are important due to privacy concerns</em></p>
+<p>You can match the transaction to the address on the blockchain itself quite easily. When you go to a block explorer and view any block, you will see every transaction in the block, the miner, and any part of the block structure.</p>
+<p>The pseudonymity that comes with most blockchains is that the address is not traced to a physical identity.</p>
+<p><em>Even though the blockchain is considered public and immutable, individual transactions can be anonymous.</em></p>
+<p>It&#39;s this pseudonymity that made blockchain technology an ideal method for illegal activity in its earlier days such as through <a href="https://fortune.com/2017/10/02/bitcoin-sale-silk-road/" target="_blank">Silk Road</a>.</p>
+<p>However once an address is linked to an individual, this pseudonymity is immediately broken and can be <a href="https://www.ifca.ai/fc14/papers/fc14_submission_11.pdf" target="_blank">easily traced</a>.</p>
+<h2 is-upgraded>Issues</h2>
+<p>The problems with being traceable is the lack of privacy. One key concern is the <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation" target="_blank">General Data Protection Regulation (GDPR)</a> that would make it impossible to conduct business on the blockchain. </p>
+<p>Time - privacy schemes <a href="https://crypto.stackexchange.com/questions/63691/how-much-time-to-generate-a-proof-in-zk-snark" target="_blank">take longer to compute</a> and might severely impact usability of blockchain applications.</p>
+<p>That being said, there are new encryption schemes such as <a href="https://medium.com/hashed-official/homomorphic-blockchain-1f7db66ac2f7" target="_blank">homomorphic encryption</a> that might help resolve this.</p>
+<h2 is-upgraded>Why</h2>
+<p>If privacy is implemented</p>
+<ol type="1" start="1">
+<li>Potentially better control over personal data</li>
+<li>Information that requires secrecy can be conducted over public blockchains</li>
+</ol>
+<p>If records are meant to be traceable</p>
+<ol type="1" start="1">
+<li>Makes for a great audit trail for provenance</li>
+<li>Allows for fine analysis of actions that occurred over time by any peer</li>
+<li>Promote transparency </li>
+</ol>
+<h2 is-upgraded>How</h2>
+<p><em>Making transactions traceable</em></p>
+<p>Naive - you can just put your name on the transaction itself and you can be immediately traced to it.</p>
+<p>Data science - such as this work on <a href="https://medium.com/alethio/dex-in-the-2019-a-recap-by-numbers-96d506ba1cb8" target="_blank">analysing decentralised exchanges</a>. Google has also made the <a href="https://cloud.google.com/blog/products/gcp/bitcoin-in-bigquery-blockchain-analytics-on-public-data" target="_blank">Bitcoin </a>and <a href="https://cloud.google.com/blog/products/data-analytics/ethereum-bigquery-public-dataset-smart-contract-analytics" target="_blank">Ethereum </a>blockchains available on BigQuery.</p>
+<p><em>Making transactions untraceable</em></p>
+<p>Zero Knowledge Proofs - let&#39;s you prove that you know some secret to another party without revealing the secret itself</p>
+<p>Homomorphic encryption - introduced by Ronald L. Rivest and Len Alderman (the R and A of RSA). It allows one to perform computations on the data without ever decrypting it.</p>
+<p>This is a BIG deal because it&#39;s a major stumbling block for practical blockchain applications.</p>
+<h2 is-upgraded>Which</h2>
+<p><em>Making transactions traceable</em></p>
+<p class="image-container"><img style="width: 602.00px" src="img\1f03b38f809259a2.png"></p>
+<p>From &#34;When to chains combine; supply chain meets blockchain&#34; by Deloitte</p>
+<ul>
+<li>Supply Chain:</li>
+</ul>
+<p>Supply chains contain complex networks of suppliers, manufacturers, distributors, retailers, auditors, and consumers. A blockchain&#39;s shared IT infrastructure would streamline workflows for all parties, no matter the size of the business network. Additionally, a shared infrastructure would provide auditors with greater visibility into participants&#39; activities along the value chain.</p>
+<p><strong>Traceability</strong> improves operational efficiency by mapping and visualizing enterprise supply chains. A growing number of consumers demand sourcing information about the products they buy. Blockchain helps organizations understand their supply chain and engage consumers with real, verifiable, and immutable data.</p>
+<p><em>Making transactions untraceable</em></p>
+<p class="image-container"><img style="width: 624.00px" src="img\a5a8cf9363656cd9.png"></p>
+<p>From the Princeton Bitcoin book</p>
+<p><a href="https://www.ey.com/en_gl/news/2019/12/ey-releases-third-generation-zero-knowledge-proof-blockchain-technology-to-the-public-domain" target="_blank"><em>Nightfall</em></a> - private transactions on the Ethereum blockchain using zk-snarks by EY</p>
+<aside class="special"><p>References used for this concept</p>
+<p>1. <a href="https://hackernoon.com/eli5-zero-knowledge-proof-78a276db9eff" target="_blank">https://hackernoon.com/eli5-zero-knowledge-proof-78a276db9eff</a></p>
+<p>2.<a href="https://medium.com/privacy-preserving-natural-language-processing/homomorphic-encryption-for-beginners-a-practical-guide-part-1-b8f26d03a98a" target="_blank">https://medium.com/privacy-preserving-natural-language-processing/homomorphic-encryption-for-beginners-a-practical-guide-part-1-b8f26d03a98a</a></p>
+<p>3.<a href="https://www2.deloitte.com/content/dam/Deloitte/ie/Documents/IE_C_TL_Supplychain_meets_blockchain_.pdf" target="_blank">https://www2.deloitte.com/content/dam/Deloitte/ie/Documents/IE_C_TL_Supplychain_meets_blockchain_.pdf</a></p>
+<p>4. <a href="https://www.lopp.net/pdf/princeton_bitcoin_book.pdf" target="_blank">https://www.lopp.net/pdf/princeton_bitcoin_book.pdf</a></p>
+<p>5. <a href="https://github.com/EYBlockchain/nightfall" target="_blank">https://github.com/EYBlockchain/nightfall</a></p>
+<p>6. <a href="https://consensys.net/blockchain-use-cases/supply-chain-management/" target="_blank">https://consensys.net/blockchain-use-cases/supply-chain-management/</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="P1.4 Putting it together: a working blockchain" duration="10">
+        <p><strong>You cannot mention blockchain without first understanding Bitcoin</strong>. <strong>It sets forth the very first principles and ideas that made blockchain technology possible.</strong></p>
+<p>Bitcoin&#39;s consensus protocol was revolutionary at that time and has become contentious recently due to energy concerns, mining centralisation, and up-and-coming ‘new&#39; consensus protocols. But let&#39;s start with the original.</p>
+<p class="image-container"><img style="width: 569.00px" src="img\160721d0219d5687.png"></p>
+<p> Bitcoin also set forth the original protocol and all network participants have to follow. This was key as it was the first decentralised and public method for individuals to transfer value.</p>
+<p class="image-container"><img style="width: 570.00px" src="img\2dc6aaef4608be40.png"></p>
+<p>If you would like to dive deeper into the technical specifications of Bitcoin check out this section right here!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="P1.5 Putting it together: making a blockchain" duration="20">
+        <p>This segment references from &#34;Learn Blockchains by Building One&#34; by Daniel van Flymen.</p>
+<ol type="1" start="1">
+<li>The blockchain itself</li>
+</ol>
+<p>You need to represent the blockchain by defining what is a transaction, what is a block, and how the blocks reference previous blocks.</p>
+<p>block = {</p>
+<p>    &#39;index&#39;: 1,</p>
+<p>    &#39;timestamp&#39;: 1506057125.900785,</p>
+<p>    &#39;transactions&#39;: [</p>
+<p>        {</p>
+<p>            &#39;sender&#39;: &#34;8527147fe1f5426f9dd545de4b27ee00&#34;,</p>
+<p>            &#39;recipient&#39;: &#34;a77f5cdfa2934df3954a5c7c7da5df1f&#34;,</p>
+<p>            &#39;amount&#39;: 5,</p>
+<p>        }</p>
+<p>    ],</p>
+<p>    &#39;proof&#39;: 324984774000,</p>
+<p>    &#39;previous_hash&#39;: &#34;2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824&#34;</p>
+<p>}</p>
+<ol type="1" start="2">
+<li>Consensus algorithm</li>
+</ol>
+<p>The guide implements a basic proof of work algorithm that is difficult to find but easy to verify. The consensus algorithm searches for hashes that end in a certain number of 0s.</p>
+<pre>import hashlib
+import json
+
+from time import time
+from uuid import uuid4
+
+
+class Blockchain(object):
+    ...
+        
+    def proof_of_work(self, last_proof):
+        &#34;&#34;&#34;
+        Simple Proof of Work Algorithm:
+         - Find a number p&#39; such that hash(pp&#39;) contains leading 4 zeroes, where p is the previous p&#39;
+         - p is the previous proof, and p&#39; is the new proof
+        :param last_proof: &lt;int&gt;
+        :return: &lt;int&gt;
+        &#34;&#34;&#34;
+
+        proof = 0
+        while self.valid_proof(last_proof, proof) is False:
+            proof += 1
+
+        return proof
+
+    @staticmethod
+    def valid_proof(last_proof, proof):
+        &#34;&#34;&#34;
+        Validates the Proof: Does hash(last_proof, proof) contain 4 leading zeroes?
+        :param last_proof: &lt;int&gt; Previous Proof
+        :param proof: &lt;int&gt; Current Proof
+        :return: &lt;bool&gt; True if correct, False if not.
+        &#34;&#34;&#34;
+
+        guess = f&#39;{last_proof}{proof}&#39;.encode()
+        guess_hash = hashlib.sha256(guess).hexdigest()
+        return guess_hash[:4] == &#34;0000&#34;</pre>
+<ol type="1" start="3">
+<li>Interacting through an API</li>
+</ol>
+<p>The guide uses Flask so that peers can make transactions, mine, call the chain, add new  nodes, resolve conflicting blocks.</p>
+<pre>...
+import requests
+
+
+class Blockchain(object)
+    ...
+    
+    def valid_chain(self, chain):
+        &#34;&#34;&#34;
+        Determine if a given blockchain is valid
+        :param chain: &lt;list&gt; A blockchain
+        :return: &lt;bool&gt; True if valid, False if not
+        &#34;&#34;&#34;
+
+        last_block = chain[0]
+        current_index = 1
+
+        while current_index &lt; len(chain):
+            block = chain[current_index]
+            print(f&#39;{last_block}&#39;)
+            print(f&#39;{block}&#39;)
+            print(&#34;\n-----------\n&#34;)
+            # Check that the hash of the block is correct
+            if block[&#39;previous_hash&#39;] != self.hash(last_block):
+                return False
+
+            # Check that the Proof of Work is correct
+            if not self.valid_proof(last_block[&#39;proof&#39;], block[&#39;proof&#39;]):
+                return False
+
+            last_block = block
+            current_index += 1
+
+        return True
+
+    def resolve_conflicts(self):
+        &#34;&#34;&#34;
+        This is our Consensus Algorithm, it resolves conflicts
+        by replacing our chain with the longest one in the network.
+        :return: &lt;bool&gt; True if our chain was replaced, False if not
+        &#34;&#34;&#34;
+
+        neighbours = self.nodes
+        new_chain = None
+
+        # We&#39;re only looking for chains longer than ours
+        max_length = len(self.chain)
+
+        # Grab and verify the chains from all the nodes in our network
+        for node in neighbours:
+            response = requests.get(f&#39;http://{node}/chain&#39;)
+
+            if response.status_code == 200:
+                length = response.json()[&#39;length&#39;]
+                chain = response.json()[&#39;chain&#39;]
+
+                # Check if the length is longer and the chain is valid
+                if length &gt; max_length and self.valid_chain(chain):
+                    max_length = length
+                    new_chain = chain
+
+        # Replace our chain if we discovered a new, valid chain longer than ours
+        if new_chain:
+            self.chain = new_chain
+            return True
+
+        return False</pre>
+<ol type="1" start="4">
+<li>Using the blockchain</li>
+</ol>
+<p>Postman is used so that you can easily make API calls and try it out for yourself.</p>
+<p>This is a really barebones and simple blockchain, nothing compared to the Bitcoin source code itself but it gives you just enough to understand how a blockchain works.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="P2.1a Web3 and the future of the internet" duration="10">
+        <h2 is-upgraded>WWW and Web2</h2>
+<p>Before we delve into what web3 is, let us first understand the current developments in the internet space - WWW and Web 2.0. </p>
+<p>The Internet and WWW provided a data transmission protocol – TCP/IP – that made the transfer of data between any two remote computers faster and massively reduced the transaction costs of information exchange. Ten years later, the Internet became more mature and programmable. We saw the rise of the so-called Web2, which brought us social media and e-commerce platforms. The Web2 revolutionized social interactions, bringing producers and consumers of information, goods, and services closer together, and allowed us to enjoy P2P interactions on a global scale, but always with a <em>middleman</em>: a platform acting as a trusted intermediary between two people who do not know or trust each other. While these platforms have done a fantastic job of creating a P2P economy, with a sophisticated content discovery and value settlement layer, they also dictate all rules of the transactions, and they control all data of their users.</p>
+<h2 is-upgraded>Need for Web3: Sticking it to the <em>Middle</em>Man</h2>
+<p>By now, most of you might have connected the dots between the previously covered topics in this course and why we need Web3. The answer is plain and simple: remove the middleman in transactions. This has the effect of decentralisation, privacy, no single point of failure and many more as covered in the previous sections.</p>
+<p>Currently, the internet uses a centralised system where clients send requests to a server.</p>
+<p>In the Web3, data is stored in multiple copies of a P2P network (read: blockchain). The management rules are formalized in the protocol and secured by majority consensus of all network participants, who are incentivized with a native network token for their activities. Blockchain, as the backbone of the Web3, redefines the data structures in the backend of the Web. It introduces a governance layer that runs on top of the current Internet, that allows for two people who do not know or trust each other to reach and settle agreements over the Web.</p>
+<p>TLDR: <strong>Blockchain + Internet = Web3</strong>. Blockchain is the decentralized backend for web3 applications. Apps on the Web3 are usually called <strong>dApps </strong>(Decentralized applications).</p>
+<p class="image-container"><img style="width: 485.00px" src="img\f2fad6766522df5e.png"> </p>
+<h2 is-upgraded>Accessing Web3: Another dark web?</h2>
+<p>Some of you might think that just a web browser like Chrome/Safari might be sufficient to access the data and write to the blockchain. Others might think that you need to install something special like TOR. Well, actually, it&#39;s somewhere in the <em>middle</em>.</p>
+<p>Since you need an account to sign and transact on the blockchain, you need a wallet. <a href="https://metamask.io/index.html" target="_blank">MetaMask</a> is a very popular Chrome extension crypto wallet. It is your gateway into dApps. Make sure you install it to enter the deep dark world of Web3! There are other wallets too, like Dapper, but MetaMask is the most famous one and we recommend that you use MetaMask for this course.</p>
+<p>MetaMask stores all your blockchain network tokens and sometimes spends your tokens to write to the blockchain (reading doesn&#39;t require spending any tokens, we will cover that in our gas optimization topic). You cannot interact with the blockchain without a wallet. Your wallet and your wallet address is basically your anonymous identity on the blockchain!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="P2.1b Working with blockchain: Dev tools" duration="20">
+        <p>Dev tools are important as it reduces development time. </p>
+<p>To interact with the blockchain, it is common to start with <strong>geth</strong>, which will install the whole ethereum blockchain on your computer. However this might take hours, which is not practical if you are trying out blockchain technology.</p>
+<p>Therefore to allow you to work with the Ethereum blockchain without running a full node there are several methods such as; </p>
+<ol type="1" start="1">
+<li><strong>Infura</strong>, a hosted Ethereum node cluster that lets your users run your application without requiring them to set up their own Ethereum node or wallet</li>
+<li><strong>Web3js, </strong>make requests to an individual Ethereum node with <em>JSON RPC </em>in order to read and write data to the network</li>
+<li><strong>HDWalletProvider</strong>, for account management process required when signing transactions on the blockchain such as metamask</li>
+</ol>
+<p>This list is not exhaustive as new and better ways are still being created. </p>
+<p>To work even faster especially for proofs-of-concepts or hackathons, we can use <strong>Ganache</strong>. <strong>Ganache</strong> is a popular personal ethereum client which you can use to run tests, execute commands, and inspect state while controlling how the chain operates. </p>
+<p class="image-container"><img style="width: 624.00px" src="img\61b9fe3cb65f79ff.png"></p>
+<p>Most tutorials have their networks deployed on a mix of <strong>Ganache</strong> and <strong>Ethereum testnet(s) connected via infura</strong>.</p>
+<p>To speed up the development and code testing, we have <strong>Truffle</strong> which is a development environment, testing framework and asset pipeline for Ethereum. <code>truffle init</code> creates the following file structure, which provides the base for our project.</p>
+<p>File structure:</p>
+<ul>
+<li>contracts/: Contains the<a href="https://solidity.readthedocs.io/" target="_blank">Solidity</a> source files for our smart contracts. There is an important contract in here called <code>Migrations.sol</code>, which we&#39;ll talk about later.</li>
+<li>migrations/: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.</li>
+<li>test/: Contains both JavaScript and Solidity tests for our smart contracts</li>
+<li>truffle-config.js: Truffle configuration file</li>
+</ul>
+<p>Below is a short walkthrough of truffle commands for creating and setting up your project. </p>
+<p>1. <em>truffle init</em> : generates sample files for solidity contracts</p>
+<p>2. edit solidity smart contracts</p>
+<p>3. <em>truffle compile</em> : compiles .sol into .json format</p>
+<p>4. <em>ganache-cli</em> : starts ganache-cli, make sure ganache-cli is already installed (this step is only for deployment on ganache, else skip this step)</p>
+<p>5. create a 2deploycontracts.js file with code to export module</p>
+<p>6. update truffle.js configuration for module.exports networks</p>
+<p>7. <em>truffle migrate</em> (--network ropsten) (--reset): deployment of contracts on ganache/ ropsten / redeploy contract even though one with the same solidity code has been previously deployed.</p>
+<p>- <em>truffle console</em> : console to run web3apis to interact with web3 JS apis (link below) (e.g. web3.eth.getTransactionReceipt or calling functions from the smart contracts by using</p>
+<p>Bounties.deployed().then(function(instance) {...})</p>
+<p>If you haven&#39;t decided on a code editor, use <strong>Visual Studio Code</strong>! There&#39;s dark mode, syntax highlighting is pretty and there is a decent <strong>Solidity Syntax Plugin by Juan Blanco</strong> for Visual Studio Code you can download which is especially useful since many tutorials online have outdated solidity code and this handy code editor can remind you of the new solidity code syntax.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="P2.2 Working with blockchain: Debugging" duration="20">
+        <p>From the pace at which the development tools in blockchains are developed and new versions of solidity language are pushed out, it is common that the tutorial you have been following is outdated and you&#39;ll are sitting in broken code. When in doubt, google! You&#39;ll be likely directed to issues on github pages or stackoverflow and you can follow their instructions.</p>
+<p><em>But what should i do if i don&#39;t know where the problem is? </em>It goes without saying that a good understanding of would be very beneficial to the debugging process. I highly recommend getting started with the articles on the ethereum developers page where just the introductory section is enough to get a good understanding of how the compilation and deployment process works. The truffle links they provide are also helpful if you are looking to write your projects in truffle. Here&#39;s the page: <a href="https://ethereum.org/developers/" target="_blank">https://ethereum.org/developers/</a></p>
+<p>If you are looking to develop an app which requires reading the state of some part of the blockchain, knowledge of web3js and how metamask works would be helpful.</p>
+<p><em>Sometimes there is more than one problem.</em> When I was editing the code for the project on voting, I noticed that the Event always on loading if metamask is enabled in browser. So i went to the place in the code where I check if there is a current provider for web3 and perform a few console logs to check the state of my accounts and voila! I found my problem: Web3.getaccounts returned an empty array. With help from stack overflow i picked the possible underlying problems (solvable with actions):</p>
+<ul>
+<li>Problem 1: metamask would not be injected on local files, so in order to access my metamask account, use the Chrome extension <strong>Web Server for Chrome</strong> to convert local file (e.g //newfile) to https://127.00.02</li>
+<li>Problem 2: To unlock my account, I have to write code to enable metamask (which prompts the user to allow site access to the account) as part of metamask&#39;s privacy feature (new!)</li>
+</ul>
+<p>As you can see, some knowledge of how these things work is essential to pinpoint the location of the error (in this case I checked web3.currentProvider). And from there onwards stack overflow and github issues help to identify the deprecated features and other developer&#39;s workaround to the issue with the correct keywords.</p>
+<p>Other interesting issues:</p>
+<ul>
+<li>Callback for web3js required (fixed with web3js v1.0 as it uses promises now!)</li>
+<li>Restoration of accounts on metamask and what I learnt about how accounts are generated on metamask</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Knowing your environment" duration="15">
+        <p><strong>For today, before you ask the workshop organisers, do a quick Google first or check Stackoverflow. We want you to try and debug by yourself first as part of the learning process. After 10 minutes, if you&#39;re still stuck, let us know. However we will be walking around throughout the day to ensure you&#39;re having a fruitful experience.</strong></p>
+<h2 is-upgraded><strong>Optimising the participant experience</strong></h2>
+<p>We will separate you into pairs and match according to your experience in programming. Today we will be adopting the pedagogy of <a href="https://hackernoon.com/the-ultimate-guide-to-pair-programming-b606625bc784" target="_blank">pair programming</a> so we can learn from each other.</p>
+<h2 is-upgraded><strong>Using Remix</strong></h2>
+<p class="image-container"><img style="width: 225.00px" src="img\8b5fb0d4d2844564.png"></p>
+<p><a href="https://remix.ethereum.org/" target="_blank">Remix </a>will be your main <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">IDE </a>for today. We use it because it&#39;s convenient to compile and test your contracts out quickly.</p>
+<h2 is-upgraded><strong>Ropsten</strong></h2>
+<p>To gain some experience of what it&#39;s like developing on Ethereum, we will use test ether from the <a href="https://ethereum.stackexchange.com/questions/13534/what-is-actually-ropsten-what-is-a-new-network" target="_blank">Ropsten network</a>. You can do this by using the <a href="https://faucet.ropsten.be/" target="_blank">Ropsten Ethereum Faucet</a> or the Metamask <a href="https://faucet.metamask.io/" target="_blank">Ropsten Ethereum Faucet</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="&#34;Smart&#34; contracts" duration="45">
+        <p>Before learning how to code/execute a smart contract, you should first understand what is a smart contract, what are some limitations and how it is used in real life scenarios.</p>
+<ul>
+<li>what this does</li>
+</ul>
+<p>A <em>smart contract</em> is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a <em>contract</em>. <a href="https://blockgeeks.com/guides/different-smart-contract-platforms/" target="_blank">Smart</a><em> contracts</em> allow the performance of credible transactions without third parties.</p>
+<p>The beauty of the decentralized nature of blockchain based peer to peer transactions means that these smart contracts don‘t require anything in the way of a middleman. Traditionally individuals or institutions such as banks and solicitors were required to facilitate legally binding contracts. Smart contracts allow individuals to bypass these costly and often slow middlemen and agree on a contract directly.  (<a href="https://www.devteam.space/blog/10-uses-for-smart-contracts/" target="_blank">https://www.devteam.space/blog/10-uses-for-smart-contracts/</a>)</p>
+<ul>
+<li>Benefits of SMart Contract</li>
+<li>Autonomy – Decentralized nature of the blockchain contracts underlying these smart contracts as well as the nature of the contract themselves means no outside party is required in the process</li>
+<li>More secure – Blockchain technology creates unalterable ledgers that provide definitive proof of transactions. It also relies on encryption while operating as a secure peer to peer transaction system.</li>
+<li>Faster speeds – Without the need for a middleman, speeds are much faster.</li>
+<li>Increased accuracy – Humans make mistakes, smart contracts are designed not to.</li>
+<li>Cost savings – The automated process lowers costs significantly.</li>
+<li>Trust – Unalterable ledgers mean transactions are set in stone</li>
+<li>Backup – Data storage devices can fail. Smart contracts duplicate all transactions so that all parties have a record of the transitions. The likelihood that all parties are going to suffer data storage failures is practically nonexistent.</li>
+</ul>
+<p>(<a href="https://www.devteam.space/blog/10-uses-for-smart-contracts/" target="_blank">https://www.devteam.space/blog/10-uses-for-smart-contracts/</a>)</p>
+<ul>
+<li>limitations to this smart contract</li>
+<li>Immutability  - Essentially, since smart contracts are scripted as a piece of codes, once set up, the contacts cannot be modified easily. In the traditional contracts, amendment of terms and conditions is often used, especially in long-term contracts whose execution is depending on real-life dynamics, and the conditions keep changing. Owing to the rigidity exhibited in the smart contracts after being established, the latter results in a wide array of practical problems more so with respect to the ease of modifying the contract terms depending on various situations. </li>
+<li> Contractual Secrecy -  the transactions are visible, and there is no security of such. Buterin explains that this is an area that needs to be focused because despite the nodes being anonymous, the maintenance of a public ledger in the distributed environment results in a privacy lapse</li>
+<li>Legal Adjudications and Enforceability - Traditionally, the establishment of a valid contract covers various constructs such as offer by one party or parties, acceptance by the other party or parties, a promise, consideration, and legal capacity mutuality and in some contracts, a written instrument. Some elements are not applicable to smart contracts and therefore regulations need to come up with a new set of enforcement to prove a smart contract to be valid</li>
+</ul>
+<p>(<a href="https://www.researchgate.net/publication/336369143_Smart_Contracts_Implementation_Applications_Benefits_and_Limitations" target="_blank">https://www.researchgate.net/publication/336369143_Smart_Contracts_Implementation_Applications_Benefits_and_Limitations</a>)</p>
+<ul>
+<li>how you can use it (life use cases that are somewhat familiar)</li>
+<li>Finance Industry</li>
+<li>ICOs/STOs - </li>
+<li>Supply Chain</li>
+<li>Healthcare</li>
+</ul>
+<p>Let&#39;s dive right into real smart contracts on the blockchain. Smart contracts are compiled before being migrated onto the blockchain. Thus you need to decompile them.</p>
+<ol type="1" start="1">
+<li><strong>Choose </strong>a smart contract from <a href="https://www.stateofthedapps.com/platforms/ethereum" target="_blank">State of the dapps</a></li>
+<li><strong>Decompile </strong>it with <a href="https://www.eveem.org/api" target="_blank">eveem</a> by Tomas Kolinko</li>
+<li><strong>Understand</strong> the decompiled code, formatting it properly might help!</li>
+<li><strong>Discuss </strong>with your partner what this smart contract does</li>
+<li><strong>Share</strong> with the class</li>
+</ol>
+<p>We analysed a <a href="https://www.eveem.org/code/0x1f52b87C3503e537853e160adBF7E330eA0Be7C4" target="_blank">decompiled auction contract</a> from <a href="https://www.stateofthedapps.com/dapps/opensea" target="_blank">OpenSea</a>.</p>
+<p>Simply by looking at the decompiled code, we noticed:</p>
+<ol type="1" start="1">
+<li>Each <code>auction</code> was a struct</li>
+<li>How <code>require</code> works</li>
+<li>Some basic checks on deciding price upper and lower limits</li>
+<li>Assigning values to variables</li>
+<li>Event logging</li>
+</ol>
+<pre>def createAuction(address _tokenAddress, uint256 _tokenId, uint256 _startingPrice, uint256 _endingPrice, uint256 _duration, address _seller): # not payable
+  require not uint8(stor0.field_160)
+  require _startingPrice &lt; 0xffffffffffffffffffffffffffffffff
+  require _endingPrice &lt; 0xffffffffffffffffffffffffffffffff
+  require _duration &lt;= 18446744073709551615
+  require ext_code.size(_tokenAddress)
+  call _tokenAddress.ownerOf(uint256 tokenId) with:
+       gas gas_remaining - 710 wei
+      args _tokenId
+  require ext_call.success
+  require ext_call.return_data[12 len 20] == caller
+  require ext_code.size(_tokenAddress)
+  call _tokenAddress.transferFrom(address from, address to, uint256 value) with:
+       gas gas_remaining - 710 wei
+      args caller, addr(this.address), _tokenId
+  require ext_call.success
+  require uint64(_duration) &gt;= 60
+  auction[addr(_tokenAddress)][_tokenId].field_0 = _tokenAddress
+  auction[addr(_tokenAddress)][_tokenId].field_256 = _seller
+  auction[addr(_tokenAddress)][_tokenId].field_512 = uint128(_startingPrice)
+  auction[addr(_tokenAddress)][_tokenId].field_640 = uint128(_endingPrice)
+  auction[addr(_tokenAddress)][_tokenId].field_768 = uint64(_duration)
+  auction[addr(_tokenAddress)][_tokenId].field_832 = uint64(block.timestamp)
+  log AuctionCreated(
+       address contract=addr(_tokenAddress),
+       uint256 tokenId=_tokenId,
+       uint256 startingPrice=_startingPrice &lt;&lt; 128,
+       uint256 endingPrice=_endingPrice &lt;&lt; 128,
+      uint256 duration=uint64(_duration))</pre>
+<aside class="warning"><p>Smart contracts are currently most popularly coded in Solidity. Here are some useful resources to learn it</p>
+<ol type="1" start="1">
+<li><a href="https://learnxinyminutes.com/docs/solidity/" target="_blank">Learn Solidity in Y minutes</a></li>
+<li><a href="https://cryptozombies.io/" target="_blank">Cryptozombies</a></li>
+</ol>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Syllabus Overview" duration="5">
+        <p>Today we will learn about Ethereum development through working with several smart contracts and dapps. Each segment is separated into:</p>
+<ol type="1" start="1">
+<li><strong>Deploy </strong>the smart contract and explore every function</li>
+<li><strong>Discuss</strong> if the smart contract fulfills its intended objectives well, how it can do better in terms of gas use and security, and how one might induce unintended behaviour in the smart contract.</li>
+<li><strong>Develop </strong>based on our earlier discussion, new functions or fixes for the smart contract</li>
+<li><strong>Digest</strong> what you&#39;ve just learned by searching for other real-life examples</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Syntax Primer" duration="10">
+        <p>Before we dive into writing our smart contract, let us take a quick glance at the syntax of solidity itself. We assume that you have some programming experience before and understand the syntax of any popular pre-existing language as we will be drawing similarities.</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p><strong>Keyword</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>Meaning</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>contract</code></p>
+</td><td colspan="1" rowspan="1"><p>A smart contract object. Somewhat similar to a class as it contains data and logic inside functions but that&#39;s where the similarities end. (For more advanced programmers, contracts can be visualised as a singleton object hosted on the public blockchain and hence constructor is called once per deployment and not once per object creation)</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>import &#34;Contract.sol&#34;;</code></p>
+</td><td colspan="1" rowspan="1"><p>Import statement similar to other languages.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>function </code><em><code>functionName(&lt;parameters&gt;)</code></em><code> </code><em><code>&lt;modifiers&gt;</code></em><code> returns (</code><em><code>&lt;returnType&gt;</code></em><code>){</code></p>
+</td><td colspan="1" rowspan="1"><p>Create a function inside a contract that can be called </p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>uint</code></p>
+</td><td colspan="1" rowspan="1"><p>Unsigned Integer type with 256 bits</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>uint8, uint16 ... uint256</code></p>
+</td><td colspan="1" rowspan="1"><p>Unsigned integer with number of bits.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p>String type</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>bool</code></p>
+</td><td colspan="1" rowspan="1"><p>Boolean type</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>mapping(</code><em><code>keyType</code></em><code> =&gt; </code><em><code>valueType</code></em><code>)</code></p>
+</td><td colspan="1" rowspan="1"><p>A key, value pair. Similar to Dictionaries or HashMaps</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>if (</code><em><code>condition</code></em><code>) {}</code></p>
+</td><td colspan="1" rowspan="1"><p>Similar to if in most languages</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>else</code></p>
+</td><td colspan="1" rowspan="1"><p>Similar to else in most languages</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><code>for</code></p>
+</td><td colspan="1" rowspan="1"><p>Similar to for in most languages</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Mortal Greeter" duration="40">
+        <p>Welcome to your first ever smart contract. Since it is your first time, we thought you would need some hand-holding and decided to walk you through all the steps involved in deploying the smart contract to the Ropsten Test Network. </p>
+<aside class="warning"><p>Please ensure you are using MetaMask with Ropsten Test Network and not Mainnet and make sure that you have enough balance. Get some ETH from a ropsten faucet if you don&#39;t!</p>
+</aside>
+<h2 is-upgraded><strong>Deploy</strong></h2>
+<p>Mortal Greeter is the &#34;Hello World&#34; equivalent to familiarise users with smart contracts via remix GUI.</p>
+<p>We have provided the Mortal/Greeter Smart Contract Code below for you to test and deploy the contract.</p>
+<ol type="1" start="1">
+<li>Open the <a href="https://remix.ethereum.org/" target="_blank">Remix IDE</a></li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img\900ccb79b24891e.png"></p>
+<p>You should see something similar to this! This is your IDE for basic smart contracts! Play around and get(h) used to it.</p>
+<ol type="1" start="2">
+<li>You can customise your solidity compiler by choosing the solidity plugin. You can change it to 0.6.6 as that&#39;s the version we will be using throughout this course.</li>
+<li>Once you&#39;re familiar with the IDE, create a new file named Greeter.sol and paste the smart contract code into it (available below).</li>
+<li>Save the file once and you should see it compile automatically. Make sure you see the green tick next to the solidity compiler which signifies a successful compilation.</li>
+<li>Head to the deploy and run transactions (the one below solidity compiler on the left nav bar). Change the environment to Injected Web3 (this is to make sure that you deploy to the actual blockchain and not a temporary local one. You will most likely get a MetaMask prompt and <em>make sure that you connect your account on the ropsten network!</em><img style="width: 63.67px" src="img\3c13ad7aac7062d2.png"></li>
+<li>Leave the gas limit and value as is (tweak if you know what you&#39;re doing) and go down to the deploy section. </li>
+</ol>
+<aside class="warning"><p>A smart contract, once deployed, cannot be changed or removed as it is immutable. Make sure you test your smart contract thoroughly before deploying to the public.</p>
+</aside>
+<ol type="1" start="7">
+<li>Choose a greeting string for the constructor. Remember, once you choose a word, you cannot change it as it is permanently stored on the blockchain! Hit deploy. Confirm your transaction with MetaMask.</li>
+<li>Once the transaction has been mined (you will get a notification from MetaMask). You can see the address of the deployed contract! Hurray! You&#39;ve deployed your first smart contract on the Ropsten Ethereum Network! It is ingrained forever in the blockchain!<img style="width: 262.27px" src="img\3766f4824fc0affa.png"></li>
+</ol>
+<p class="image-container"><img style="width: 210.59px" src="img\d8507b4d2fb84ec1.png"></p>
+<ol type="1" start="9">
+<li>You can call the methods using the Remix GUI by clicking on the method. You can see that it says &#34;Hello OpenNodes!&#34; just like we wanted it to. You can even copy your contract address and check it out on <a href="https://ropsten.etherscan.io/" target="_blank">Ropsten Etherscan</a>!</li>
+</ol>
+<h2 is-upgraded><strong>Logic</strong></h2>
+<p class="image-container"><img style="width: 348.50px" src="img\9e91153bb464cc34.png"></p>
+<h2 is-upgraded><strong>Syntax</strong></h2>
+<pre>pragma solidity ^0.6.6;
+/* the above line specifies the version of the solidity compiler that */
+/* this program is compatible with. */
+
+contract Mortal {
+    /* Define variable owner of the type address */
+    /* address is a type that stores wallet and contract addresses */
+    address owner;
+
+    /* This constructor is executed only once at deployment and sets the owner of the contract */
+    constructor() { owner = msg.sender; }
+
+    /* Function to recover the funds on the contract */
+    /* notice how function access modifiers are specified after the name */
+    function kill() public { 
+        if (msg.sender == owner) 
+            selfdestruct(msg.sender); 
+    }
+}
+/* Another contract Greeter which inherits from Mortal */
+/* Inheritance in Solidity is similar to OOP where */
+/* all the methods and data members (that are not private) are */
+/* accessible in the subclass */
+contract Greeter is Mortal {
+    /* Define variable greeting of the type string */
+    string greeting;
+
+    /* This runs when the contract is deployed */
+    /* public functions are functions that can be called by people while private functions are functions that can only be called by contracts */
+    constructor(string memory _greeting) public {
+        greeting = _greeting;
+    }
+
+    /* Main function that can be called by people */
+    /* notice how data is returned */
+    function greet() public view returns (string memory) {
+        return greeting;
+    }
+}</pre>
+<p>Further Points to note on the Syntax</p>
+<ul>
+<li>Notice that the string parameter in the constructor is tagged with memory.</li>
+<li>There are two types of variables in smart contracts: <code>storage</code> and <code>memory</code>.</li>
+<li>Storage - variables permanently stored on the blockchain (similar to pass by reference)</li>
+<li>Memory - temporary variables erased between external function calls (similar to pass by value)</li>
+<li>Storage variables can only interact within the contract ecosystem as the memory address of the variables have no meaning outside the Ethereum Virtual Machine.</li>
+<li>Question: Can public functions (which can be called from outside the blockchain) have storage parameters?</li>
+<li>You might be familiar with public and private modifiers but what about the view modifier?</li>
+<li>View functions only read the data from the blockchain but doesn&#39;t write to the blockchain.</li>
+<li>View functions hence don&#39;t cost gas. Gas is needed to run code on the blockchain that changes the storage of the contract.</li>
+<li><code>msg.sender:</code> Each function call can access the address of the caller of the function through this variable.</li>
+</ul>
+<h2 is-upgraded><strong>Discuss</strong></h2>
+<ol type="1" start="1">
+<li>What do you think of the deployment process?</li>
+<li>What happens if you want to change the greeting?</li>
+</ol>
+<h2 is-upgraded><strong>Digest</strong></h2>
+<ul>
+<li><a href="https://github.com/ethereum/ethereum-org/blob/master/views/content/greeter.md" target="_blank">MortalGreeter Smart Contract</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Roommate smart contract agreement" duration="40">
+        <p>Let us take a look at a more advanced smart contract which has a real-life use case.</p>
+<h2 is-upgraded><strong>Deploy</strong></h2>
+<aside class="warning"><p>Please ensure you use solidity compiler v0.6.6 or above</p>
+</aside>
+<p>You are able to send Ether to your agreement, set new terms, and withdraw Ether if an agreement has been violated. </p>
+<ul>
+<li>Replace <code>**</code> with your address and your roommate&#39;s address</li>
+<li>The <code>Id</code> acts like a password and you need to put the same Id as your address&#39; position in the array it is stored</li>
+<li>Interact with your roommate&#39;s contract!</li>
+</ul>
+<aside class="warning"><p>Ensure that you have compiled the same contract as your roommate, then call the address of the smart contract to interact with it!</p>
+</aside>
+<h2 is-upgraded><strong>Logic</strong></h2>
+<p>We are going to model the idea of roommates creating agreements with each other and claiming disputes when the other violates said agreement. It can be visualised as so. This is similar to a normal contract and we are going to make it &#34;smart&#34;.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\173315fea28cc0c.png"></p>
+<h2 is-upgraded><strong>Syntax</strong></h2>
+<pre>pragma solidity ^0.6.6;
+pragma experimental ABIEncoderV2;
+
+contract RoomieAgreement {
+    
+    // Events are to pass information when something happens on the blockchain to your front-end
+    // Your front-end can listen/watch for these events
+    event NewAgreement (uint agreementId, string agreementTerms);
+    event NewDispute (uint disputeId, string dispute, uint _claim, address claimant);
+
+    // Variables must be declared
+    uint agreementId = 0;
+    uint minDepositVal = 1;
+
+    // Solidity only support integers
+    uint minDeposit = minDepositVal / 1000;
+    uint totalDeposit = 0;
+    uint disputeId = 0;
+
+    //Structs let you create data types with multiple properties
+    struct agreement {
+        uint agreementId;
+        string agreementTerms;
+    }
+    
+    // Declare an array called agreements of type agreement (a struct) that is publicly viewable
+    // Note that the public modifier only enables public read and not public write
+    agreement[] public agreements;
+    
+    // hardcoded addresses of your roomies
+    address[] public roomies = [**, **];    
+    // Mappings are like dictionaries, it&#39;s 1 to 1
+    mapping (address =&gt; uint) public roomieDeposits;
+    
+    // This function checks that you submit the minimum deposit and includes it
+    // The payable modifier lets you send money to the smart contract through this function
+    // Notice the use of msg.value
+    // We are not passing the value of money through the parameter
+    // But taking it from the transaction which calls the function
+    function addDeposit() public payable {
+        //require checks a condition. if it fails, it kills the current transaction and reverts
+        require(msg.value &gt; minDeposit);
+        // mapping 
+        roomieDeposits[msg.sender] = msg.value;
+        totalDeposit = totalDeposit+msg.value;
+    }
+    
+    // This is actually an experimental function but let&#39;s you check the agreements
+    function viewAgreements() public view returns (agreement[] memory) {
+        return agreements;
+    }
+    
+    //This lets you view the current total deposits
+    function viewDeposits () public view returns (uint) {
+        return totalDeposit;
+    }
+    // This function checks that you picked your right Id and adds your new agreement
+    function createAgreement(string memory _agreementTerms, uint _roomieId) public {
+        require(roomies[_roomieId-1] == msg.sender);
+        agreementId++;
+        // array.push is used to add element at the end of dynamic array
+        agreements.push(agreement(agreementId,_agreementTerms));
+
+        // Event is fired off when this function is complete
+        emit NewAgreement(agreementId,_agreementTerms);
+    }
+    
+    // This function lets you execute a claim and will send it to the claimant
+    function createDispute(uint _dispute, uint _claim, uint _roomieId) public {
+        // notice the use of payable again
+        address payable claimant = msg.sender;
+        require(roomies[_roomieId-1] == msg.sender);
+        require(_dispute &lt;= agreementId);
+        disputeId++;
+        string memory dispute = agreements[_dispute-1].agreementTerms;
+        //Event is fired off when this function is complete
+        totalDeposit = totalDeposit-_claim;
+        claimant.transfer(_claim);
+        emit NewDispute(disputeId, dispute, _claim, claimant);
+    }
+}</pre>
+<p>Further Points to note on the Syntax</p>
+<ul>
+<li>Events are for you to communicate that something happened on the blockchain to your app frontend</li>
+<li>Events can also be used as a gas-cheap way to burn data into the blockchain rather than storing it in the storage of your contract</li>
+<li>Require: This statement allows you to check a condition and immediately end the transaction/function call if the condition is not satisfied. It is similar to assertion.</li>
+<li>Floating point numbers are not supported in Solidity yet. One way to bypass this is to use smaller units. Example, you can send 1.5 Ether using Smart contracts. But behind the scenes, Ether is converted to wei, which is the smallest unit of token. (1018 wei = 1 ether). You cannot divide a wei.</li>
+<li>Payable: This is a very important keyword when it comes to writing smart contracts. All it takes for your function to accept Ether is to add this keyword as a modifier. </li>
+<li>When a user calls your function (either directly or through web3), they can specify how much ether (in wei) that they want to send. This value can be accessed through <code>msg.value</code>.</li>
+<li>Once some money is sent to the smart contract, it stays in the smart contracts&#39; balance (can be accessed through <code>address(this).balance</code>) and you can also transfer funds from the contract to an address using transfer. Make sure the address is payable too!</li>
+</ul>
+<h2 is-upgraded><strong>Discuss</strong></h2>
+<ol type="1" start="1">
+<li>Privacy - you have put your contract address on the blockchain, <a href="https://medium.com/@weijiek/private-voting-and-whistleblowing-in-ethereum-using-semaphore-449b376808e" target="_blank">how about private voting</a>?</li>
+<li>Fake claims - your roomie can essentially just claim all the money anytime</li>
+<li>Lack of adjudication - how do you know who was right or wrong in a dispute?</li>
+<li>Gas guzzling - are there more efficient ways to write this contract?</li>
+<li>Game theory - how do you incentivise someone to not abuse the claiming function?</li>
+<li>What is wrong with the Dispute function? How can we do it better?</li>
+</ol>
+<h2 is-upgraded><strong>Develop</strong></h2>
+<p><strong>Advanced: </strong>Implement a solution to any one of these problems we have discussed.</p>
+<p><strong>Simple passwords</strong></p>
+<p>Having a simple password on the contract. Note that the password should at least be hashed.</p>
+<pre>uint[] private passwords = [12345, 123456]; //should be hashed
+
+function createAgreement(string _agreementTerms, uint _roomieId, uint _password) public {
+        require(roomies[_roomieId-1] == msg.sender);
+        require(_password == passwords[_roomieId-1]);
+        agreementId++;
+        agreements.push(agreement(agreementId,_agreementTerms));
+
+        // Event is fired off when this function is complete
+        emit NewAgreement(agreementId,_agreementTerms);
+    }</pre>
+<p><strong>Adding a username password pair</strong></p>
+<p>Before allowing the transaction, check if the password and username is correct. Again, this should be hashed. Also, the return function should be an <code>emit</code> instead.</p>
+<pre>bool has_Login = false;
+
+function enterPassword(string _username, string _password) public returns (string memory){
+        if (keccak256(abi.encodePacked((_username))) == keccak256(abi.encodePacked((&#34;hello&#34;))) &amp;&amp; keccak256(abi.encodePacked((_password))) == keccak256(abi.encodePacked((&#34;yes&#34;)))){
+            has_Login = true;
+            return &#34;Welcome!&#34;; // emit welcomeMessage(bool _has_Login);
+        }
+        else {
+
+            return &#34;Login Failed!&#34;; // emit welcomeMessage(bool _has_Login);
+
+        }
+    }
+
+function addDeposit() public payable {
+        //require checks a condition. if it fails, it kills the current transaction and reverts
+        require(msg.value &gt; minDeposit);
+        require(has_Login == true);
+        roomieDeposits[msg.sender] = msg.value;
+        totalDeposit = totalDeposit+msg.value;
+    }</pre>
+<p><strong>Intermediate:</strong> Create a function that adds another party as an adjudicator</p>
+<pre>bool disputeApproval = false;
+    function approveDisputeClaim() public {
+        require(msg.sender==roomies[2]);
+        disputeApproval = true;
+    }
+    function createDisputeAdjudication(uint _dispute, uint _claim, uint _roomieId) {
+        require(disputeApproval == true);
+        address claimant = msg.sender;
+        require(roomies[_roomieId-1] == msg.sender);
+        require(_dispute &lt;= agreementId);
+        disputeId++;
+        string dispute = agreements[_dispute-1].agreementTerms;
+        //Event is fired off when this function is complete
+        
+        totalDeposit = totalDeposit-_claim;
+        claimant.transfer(_claim);
+        disputeApproval = false;
+        emit NewDispute(disputeId, dispute, _claim, claimant);
+
+    }</pre>
+<p><strong>Beginner</strong>: Do some research on escrow contracts and share with the workshop</p>
+<h2 is-upgraded><strong>Digest</strong></h2>
+<ul>
+<li><a href="https://medium.com/@pranav.89/smart-contracting-simplified-escrow-in-solidity-ethereum-b19761e8fe74" target="_blank">Escrow smart contract tutorial</a></li>
+<li><a href="https://lawgazette.com.sg/feature/introduction-to-programmable-contracts-a-dispute-resolution-perspective/" target="_blank">Introduction to Programmable Contracts: A Dispute Resolution Perspective</a></li>
+<li><a href="https://mitmedialab.github.io/2019-MIT-Computational-Law-Course/session-lecture-smart-contracts-and-the-law.html" target="_blank">Smart Contracts in computational Law - by MIT Media Lab</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Decentralised confessions page" duration="40">
+        <h2 is-upgraded><strong>Deploy</strong></h2>
+<p>This is a message board that can hold up to 10 messages and allows you to post messages.</p>
+<p>You will get the chance to call other people&#39;s contracts once they have uploaded.</p>
+<pre>pragma solidity ^0.4.26;
+
+//Contract is just like classes
+contract MessageBoard {
+    //Defining User structure. address is a variable type from solidity
+    struct User {
+        address _address;
+        string name;
+        bool isValue;
+    }
+
+    //Defining Message structure. You can see it have User type member
+    struct Message {
+        string text;
+        User _user;
+    }
+    
+    Message[10] public messageBoardLogs;
+    
+    //Declaring an event
+    event MessageCreated (string text, address _address, string name, bool isValue  );
+
+    //mapping is a key value store. We are specified type of key and value
+    mapping (address =&gt; User) users;
+
+    // public function, which is returning boolean
+    function setUsername(string memory name) public returns (bool) {
+        //require() is throwing error, if the input is not true
+        require(userExists(msg.sender) == false, &#34;userAddress has been previously registered&#34;);
+        //msg.sender is the address, from where the signUp was called.
+        users[msg.sender] = User(msg.sender, name, true);
+        return true;
+    }
+
+    //8 bit unsigned integer (so no negative values).
+    uint8 public messageCount = 0;
+    
+    //it is creating an event Message with text and user.
+    function sendMessage (string text) public returns (bool) {
+        //require() is throwing error, if the input is not true
+        require(userExists(msg.sender) == true,&#34;msg.sender is not added into users&#34;);
+        messageCount++;
+        emit MessageCreated(text, users[msg.sender]._address,users[msg.sender].name,true);
+        messageBoardLogs[messageCount] = Message(text, users[msg.sender]);
+        return true;
+    }
+    
+    //We are using view keyword, to specify that it is not modified the state of contract. It will consume less resources. 
+    function userExists(address userAddress) view public returns (bool) {
+        return users[userAddress].isValue;
+    }
+    function readMessage(uint messageIndex) view public returns (string text){
+        require(messageIndex&lt;=messageCount,&#34;message index out of range&#34;);
+        return messageBoardLogs[messageIndex].text;
+    }
+
+
+}</pre>
+<h2 is-upgraded><strong>Discuss</strong></h2>
+<ul>
+<li>Can there be a better structure for how messageboard keeps messages? The current deployed messageboard can only keep track of the first 10 messages to be written to the board. </li>
+<li>How should we rewrite the code such that the last 10 messages are kept instead?</li>
+<li>Useful feature: currently messages can only be accessed by message index, how about a feature to access latest message?</li>
+<li>Would a dynamic array which increases in size as more people write to the messageboard be better than our fixed-length message board?</li>
+<li>What are some ways to disincentivise spam on the messageboard?</li>
+</ul>
+<h2 is-upgraded><strong>Develop</strong></h2>
+<p><strong>Advanced: </strong>Implement a solution to any one of these problems we have discussed.</p>
+<p><strong>Implement a check to prevent consecutive posting and payment</strong></p>
+<p>Ensure that any post will need to be paid for</p>
+<pre>    address prev;
+    uint minVal = 1;
+    uint minDeposit = minVal / 10000;
+
+    function sendMessage (string text) public payable returns (bool) {
+        //require() is throwing error, if the input is not true
+        require(userExists(msg.sender) == true,&#34;msg.sender is not added into users&#34;);
+        require(msg.sender != prev, &#34;You&#39;re already the previous sender! Wait a while.&#34;);
+        require(msg.value &gt;= minDeposit);
+        messageCount++;
+        latest++;
+        latest = latest % maxLog;
+        emit MessageCreated(text, users[msg.sender]._address,users[msg.sender].name,true);
+        messageBoardLogs[latest] = Message(text, users[msg.sender]);
+        prev = msg.sender;
+        return true;
+    }</pre>
+<p><strong>Make message posters perform some form of proof-of-work</strong></p>
+<p>Store proofs that have already been done to prevent repeats. Message posters will have to hash their text and a nonce to form their own proof. Check that the proof has 4 leading 0s.</p>
+<pre>mapping (bytes32 =&gt; bool) proofs;
+    //it is creating an event Message with text and user.
+    // To control for spam, must hash your message with a nonce to obtain a proof with
+    //    required amount of leading zeros.
+    function sendMessage (string text, uint256 nonce, bytes32 proof) public returns (bool) {
+        //require() is throwing error, if the input is not true
+        require(proofs[proof] == false);
+        require(keccak256(abi.encodePacked(text, nonce)) == proof);
+        require(userExists(msg.sender) == true,&#34;msg.sender is not added into users&#34;);
+        require(proof[0] == 0);
+        require(proof[1] == 0);
+        require(proof[2] == 0);
+        require(proof[3] == 0);
+        proofs[proof] = true;
+        messageCount++;
+        emit MessageCreated(text, users[msg.sender]._address,users[msg.sender].name,true);
+        messageBoardLogs[messageCount] = Message(text, users[msg.sender]);
+        return true;
+    }</pre>
+<p><strong>Intermediate</strong>: devise a solution for the 10 message limit </p>
+<pre>    //messageBoardLogs can store up to 20 messages
+    Message[21] messageBoardLogs;
+    //state change when messageBoardLogs is full
+    bool messageBoardLogsFull = false;
+    //Declaring an event
+    event MessageCreated (string text, address _address, string name, bool isValue  );
+    //empty constructor will be generated at compile-time if code is not provided.
+    //constructor() public {}
+    //mapping is a key value store. We are specified type of key and value
+    mapping (address =&gt; User) users;
+    // public function, which is returning boolean
+    function setUsername(string memory name) public returns (bool) {
+        //require() is throwing error, if the input is not true
+        require(userExists(msg.sender) == false, &#34;userAddress has been previously registered&#34;);
+        //msg.sender is the address, from where the signUp was called.
+        users[msg.sender] = User(msg.sender, name, true);
+        return true;
+    }
+
+    //8 bit unsigned integer (so no negative values).
+    uint8 public messageCount = 0;
+    //it is creating an event Message with text and user.
+    function sendMessage (string memory text) public returns (bool) {
+        //require() is throwing error, if the input is not true
+        require(userExists(msg.sender) == true,&#34;msg.sender is not added into users&#34;);
+        //replaces message when threshold message number exceeded
+        if(messageCount&lt;=20){
+            messageCount++;
+        }else{
+            messageBoardLogsFull = true;
+            messageCount = 1;
+        }
+        emit MessageCreated(text, users[msg.sender]._address,users[msg.sender].name,true);
+        messageBoardLogs[messageCount] = Message(text, users[msg.sender]);
+        return true;
+    }
+  function userExists(address userAddress)  public view returns (bool) {
+        return users[userAddress].isValue;
+    }
+    function readMessage(uint messageIndex)  public view returns (string memory text){
+        if(messageBoardLogsFull == false){
+            require(messageIndex&lt;=messageCount,&#34;message index out of range&#34;);
+        }else{
+            require(messageIndex&lt;=21,&#34;message index out of range&#34;);
+        }
+        return messageBoardLogs[messageIndex].text;
+    }
+    function readLatestMessage() public view returns(string memory text){
+        require(messageCount&gt;0,&#34;there are no messages in messageBoardLogs&#34;);
+        return messageBoardLogs[messageCount].text;
+    }
+
+
+}</pre>
+<p><strong>Beginner</strong>: what are some ways that people have used blockchain to share messages?</p>
+<h2 is-upgraded><strong>Digest</strong></h2>
+<ul>
+<li><a href="https://medium.com/@promentol/first-ethereum-solidity-smart-contract-and-dapp-draft-e27a7d0cff26" target="_blank">MessageBoard Tutorial with Promentol</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Voting on the blockchain" duration="40">
+        <h2 is-upgraded><strong>Deploy</strong></h2>
+<p>This contract simulates a simple voting process. There are 2 candidates you can vote for.</p>
+<p>To view the frontend, <a href="https://drive.google.com/drive/folders/1lgsti3TaQusW0_2_kbVZcgWiay9FdbXe" target="_blank">download this file</a>. Edit the <code>mnemonic</code> and <code>infura Api Key</code> in <code>secrets.json</code> file to deploy the contract on ropsten with the <code>cmd : truffle migrate --network ropsten --reset</code></p>
+<pre>pragma solidity ^0.5.1;
+
+contract Election {
+    // Model a Candidate
+    struct Candidate {
+        uint id;
+        string name;
+        uint voteCount;
+        // uint _candidateId;
+    }
+
+    // Store accounts that have voted
+    mapping(address =&gt; bool) public voters;
+    // Store Candidates
+    // Fetch Candidate
+    mapping(uint =&gt; Candidate) public candidates;
+    // Store Candidates Count
+    uint public candidatesCount;
+
+    // voted event
+    event votedEvent (
+        uint indexed _candidateId
+    );
+
+    constructor () public {
+        addCandidate(&#34;Candidate 1&#34;);
+        addCandidate(&#34;Candidate 2&#34;);
+    }
+
+    function addCandidate (string memory _name) private {
+        candidatesCount ++;
+        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
+    }
+
+    function vote (uint _candidateId) public {
+        // require that they haven&#39;t voted before
+        require(!voters[msg.sender], &#34;if voter is not msg.sender&#34;);
+
+        // update candidate vote Count
+        candidates[_candidateId].voteCount ++;
+
+        // trigger voted event
+        emit votedEvent(_candidateId);
+    }
+    
+}</pre>
+<h2 is-upgraded><strong>Discuss</strong></h2>
+<ul>
+<li>How might we bribe the voters? (and get away with it)</li>
+<li>Can we implement a time limit to voting?</li>
+<li>Can we make the vote private?</li>
+<li>Is the voting process secure?</li>
+<li>Semaphores: privacy on the blockchain https://medium.com/coinmonks/to-mixers-and-beyond-presenting-semaphore-a-privacy-gadget-built-on-ethereum-4c8b00857c9b</li>
+</ul>
+<h2 is-upgraded><strong>Develop</strong></h2>
+<p><strong>Advanced: </strong>Implement a solution to any one of these problems we have discussed.</p>
+<p><strong>Intermediate: </strong>Implement a way you can check that the candidate is valid and the voter votes only once.</p>
+<pre>    function vote (uint _candidateId) public {
+        // require that they haven&#39;t voted before
+        require(!voters[msg.sender], &#34;if voter is not msg.sender&#34;);
+
+        // require a valid candidate
+        require(_candidateId &gt; 0 &amp;&amp; _candidateId &lt;= candidatesCount,&#34;if candidate not valid&#34;);
+
+        // record that voter has voted
+        voters[msg.sender] = true;
+
+        // update candidate vote Count
+        candidates[_candidateId].voteCount ++;
+
+        // trigger voted event
+        emit votedEvent(_candidateId);
+    }</pre>
+<p><strong>Beginner: </strong>what other aspects of the democratic process could be decentralised?</p>
+<h2 is-upgraded><strong>Digest</strong></h2>
+<ul>
+<li><a href="https://www.dappuniversity.com/articles/the-ultimate-ethereum-dapp-tutorial" target="_blank">Voting Smart Contract Tutorial with Gregory McCubbin at Dapp University</a></li>
+<li><a href="https://colony.io/" target="_blank">Colony.io</a></li>
+<li><a href="https://law.stanford.edu/projects/blockchain-democracy-digital-governance-in-the-eu-and-the-us/" target="_blank">Blockchain Democracy: Digital Governance in the EU and the US</a></li>
+<li><a href="https://www.computerworld.com/article/3430697/why-blockchain-could-be-a-threat-to-democracy.html" target="_blank">Why blockchain-based voting could threaten democracy</a></li>
+</ul>
+<p>Edit: A kind workshop participant found a solution to prevent duplicate rows from being displayed in html for Election Page which was used in the final zipped version for the code. <a href="https://stackoverflow.com/questions/56730883/how-to-prevent-duplicate-rows-from-being-displayed-in-html" target="_blank">https://stackoverflow.com/questions/56730883/how-to-prevent-duplicate-rows-from-being-displayed-in-html</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="A-very-flawed Kahoot" duration="40">
+        <h2 is-upgraded><strong>Deploy</strong></h2>
+<p>You&#39;ve deployed a local front-end connected to the decentralised attendance and question-answer dapp.</p>
+<pre>pragma solidity ^0.5.0;
+
+
+
+contract Users {
+    // data structure that stores a user
+    
+    bytes32 answer;
+    
+    struct User {
+        string name;
+        string status;
+        address walletAddress;
+        uint createdAt;
+        uint updatedAt;
+        uint points;
+    }
+
+    // it maps the user&#39;s wallet address with the user ID
+    mapping (address =&gt; uint) public usersIds;
+
+    // Array of User that holds the list of users and their details
+    User[] public users;
+
+    // event fired when an user is registered
+    event newUserRegistered(uint id);
+
+    // event fired when the user updates his status or name
+    event userUpdateEvent(uint id);
+
+
+
+    // Modifier: check if the caller of the smart contract is registered
+    modifier checkSenderIsRegistered {
+            require(isRegistered());
+            _;
+    }
+
+
+
+    /**
+     * Constructor function
+     */
+    constructor() public
+    {
+        // NOTE: the first user MUST be empty: if you are trying to access to an element
+        // of the usersIds mapping that does not exist (like usersIds[0x12345]) you will
+        // receive 0, that&#39;s why in the first position (with index 0) must be initialized
+        addUser(address(0x0), &#34;&#34;, &#34;&#34;);
+
+        // Some dummy data
+        addUser(address(0x333333333333), &#34;Leo Brown&#34;, &#34;Available&#34;);
+        addUser(address(0x111111111111), &#34;John Doe&#34;, &#34;Very happy&#34;);
+        addUser(address(0x222222222222), &#34;Mary Smith&#34;, &#34;Not in the mood today&#34;);
+    }
+    
+    function postAnswer(string memory _answer) public returns(bytes32){
+        require(msg.sender==** || msg.sender==** || msg.sender==**);
+        answer = keccak256(abi.encode(_answer));
+    }
+
+
+    /**
+     * Function to register a new user.
+     *
+     * @param _userName                 The displaying name
+     * @param _status        The status of the user
+     */
+    function registerUser(string memory _userName, string memory _status) public
+    returns(uint)
+    {
+            return addUser(msg.sender, _userName, _status);
+    }
+
+
+
+    /**
+     * Add a new user. This function must be private because an user
+     * cannot insert another user on behalf of someone else.
+     *
+     * @param _wAddr                 Address wallet of the user
+     * @param _userName                Displaying name of the user
+     * @param _status            Status of the user
+     */
+    function addUser(address _wAddr, string memory  _userName, string memory _status) private
+    returns(uint)
+    {
+        // checking if the user is already registered
+        uint userId = usersIds[_wAddr];
+        require (userId == 0);
+
+        // associating the user wallet address with the new ID
+        usersIds[_wAddr] = users.length;
+        uint newUserId = users.length++;
+        // storing the new user details
+        users[newUserId] = User({
+                name: _userName,
+                status: _status,
+                walletAddress: _wAddr,
+                createdAt: now,
+                updatedAt: now,
+            points: 0
+        });
+
+        // emitting the event that a new user has been registered
+        emit newUserRegistered(newUserId);
+
+        return newUserId;
+    }
+
+
+
+    /**
+     * Update the user profile of the caller of this method.
+     * Note: the user can modify only his own profile.
+     *
+     * @param _newUserName        The new user&#39;s displaying name
+     * @param _newStatus         The new user&#39;s status
+     */
+    function updateUser(string memory _newUserName, string memory _newStatus) checkSenderIsRegistered public
+    returns(uint)
+    {
+            // An user can modify only his own profile.
+            uint userId = usersIds[msg.sender];
+
+            User storage user = users[userId];
+        if (keccak256(abi.encode(_newStatus)) == answer){
+            user.points += 10;
+        }
+            user.name = _newUserName;
+            user.status = _newStatus;
+            user.updatedAt = now;
+
+            emit userUpdateEvent(userId);
+
+
+            return userId;
+    }
+
+
+
+    /**
+     * Get the user&#39;s profile information.
+     *
+     * @param _id         The ID of the user stored on the blockchain.
+     */
+    function getUserById(uint _id) public view
+    returns(
+            uint,
+            string memory,
+            string memory,
+            address,
+            uint,
+            uint,
+            uint
+    ) {
+            // checking if the ID is valid
+            require( (_id &gt; 0) || (_id &lt;= users.length) );
+
+            User memory i = users[_id];
+
+            return (
+                    _id,
+                    i.name,
+                    i.status,
+                    i.walletAddress,
+                    i.createdAt,
+                    i.updatedAt,
+                    i.points
+            );
+    }
+
+
+
+    /**
+     * Return the profile information of the caller.
+     */
+    function getOwnProfile() checkSenderIsRegistered public view
+    returns(
+            uint,
+            string memory,
+            string memory,
+            address,
+            uint,
+            uint,
+            uint
+    ) {
+            uint id = usersIds[msg.sender];
+
+            return getUserById(id);
+    }
+
+
+
+    /**
+     * Check if the user that is calling the smart contract is registered.
+     */
+    function isRegistered() public view returns (bool)
+    {
+            return (usersIds[msg.sender] &gt; 0);
+    }
+
+
+
+    /**
+     * Return the number of total registered users.
+     */
+    function totalUsers() public view returns (uint)
+    {
+        // NOTE: the total registered user is length-1 because the user with
+        // index 0 is empty check the contructor: addUser(address(0x0), &#34;&#34;, &#34;&#34;);
+        return users.length - 1;
+    }
+
+}</pre>
+<h2 is-upgraded><strong>Discuss</strong></h2>
+<ul>
+<li>Why is this question-answer app flawed?(ie. people from scoring multiple points with same question, answer checks for exact string and a different way of expressing the same answer would not award you the point.)</li>
+<li>What are some added functions that would be useful? (ie. a constraint that allows one answer after every question is asked would prevent people from scoring multiple points with same question)</li>
+</ul>
+<h2 is-upgraded><strong>Digest</strong></h2>
+<ul>
+<li><a href="https://www.danielefavi.com/blog/create-your-blockchain-dapp-with-ethereum-and-vuejs-part-1/" target="_blank">Create your Blockchain Dapp with Etherem and VueJs with DanieleFavi</a></li>
+</ul>
+<h2 is-upgraded><strong>Develop</strong></h2>
+<p>This is our last dapp for the day, thus it is <strong><em>CAPSTONE TIME</em></strong>.</p>
+<p>Fully design and implement a new feature for this dapp.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Digest" duration="40">
+        <p>Process of creating a dapp (beginners)</p>
+<ul>
+<li><strong>Design</strong> contract functions with retrieval of information in mind and think about any potential vulnerabilities arising from the code</li>
+<li><strong>Test </strong>out your contract functions on remix ide to make sure that the contract works as expected</li>
+<li><strong>Initialise </strong>sample project using <code>truffle init</code> to create your own sample project and copy and paste the solidity code</li>
+<li><strong>Create</strong> front end html and link it up with web3js to interact with the contract</li>
+<li><strong>Configure</strong> network in <code>truffle.js</code> or <code>truffle-config.js</code> for deployment of contracts</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Additional Resources to Take Note of" duration="5">
+        <p>Here are some useful additional resources that you could use to pursue more information independently:</p>
+<p>Useful YouTube Channels and Playlists:</p>
+<ul>
+<li><a href="https://www.youtube.com/c/CrushCrypto/" target="_blank">Crush Crypto</a>: An independent research group focused on blockchain technology and digital currencies with the goal of providing high quality fundamental analysis in cryptocurrency investing.</li>
+<li><a href="https://www.youtube.com/playlist?list=PLC6xsrbVD7wufHRTvFbf-QN1NSK1yss9U" target="_blank">Khan Academy&#39;s Bitcoin Playlist</a>: A Playlist of videos that have been put together by Khan Academy to break the fundamental concepts underlying Blockchain Technology.</li>
+<li><a href="https://www.youtube.com/c/BitcoinforBeginners/featured" target="_blank">Bitcoin for Beginners</a>: A YouTube channel that aims to put out interesting and informative content all around the cryptocurrency space, in a beginner-friendly format.</li>
+</ul>
+<p>The Best Blockchain Newsletters and News Sites:</p>
+<ul>
+<li><a href="https://www.coindesk.com/" target="_blank">CoinDesk</a></li>
+<li><a href="https://cryptowat.ch/" target="_blank">Crypto Watch</a></li>
+<li><a href="https://defiweekly.substack.com/" target="_blank">DeFi Weekly</a></li>
+<li><a href="https://rustinblockchain.org/" target="_blank">Rust in Blockchain</a></li>
+</ul>
+<p>Here is a Free, Open-Source Course on the Fundamentals of Blockchain Protocols: <a href="https://cryptoeconomics.study/en/" target="_blank">crytoeconomics.study</a></p>
+<p>Other Useful Websites and Resources:</p>
+<ul>
+<li><a href="https://academy.binance.com/" target="_blank">Binance Academy</a></li>
+<li><a href="https://en.bitcoin.it/wiki/Main_Page" target="_blank">The Bitcoin Wiki</a></li>
+<li><a href="https://cointelegraph.com/bitcoin-for-beginners" target="_blank">Cointelegraph&#39;s Bitcoin for Beginners Series</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Blockchain Decision Models" duration="10">
+        <p>A decision model is a formal system used for perceiving, organizing, and managing the business logic behind a business decision. We will now break down the IBM model to evaluate whether or not one should use a blockchain. </p>
+<p class="image-container"><img style="width: 624.00px" src="img\7a5f1fe720987844.png"></p>
+<p>The main idea that the entire model encapsulates, is that a problem to which blockchain would be a possible solution is one that:</p>
+<ul>
+<li>Works with contractual agreements and makes use of complex business logics: The property of immutability of the blockchain comes in handy here to ensure that contracts and other legal documents are tamper proof. Moreover smart contracts provide more security when compared to traditional contract laws and also reduce other transactional costs associated with contracting. </li>
+<li>Requires you to keep your transactions private: The property of traceability of blockchains which allow addresses to not be traced to a physical identity makes the blockchain a perfect solution to such problems. </li>
+<li>Requires a market approach: This problem can be further analysed and broken down into three other key factors to consider before deciding to adopt a blockchain solution</li>
+<li>Whether the potential use case requires greater than two parties: If the answer is YES, then a blockchain solution can come in handy, since decentralized networks give each participant the flexibility to create their own customised solutions using proprietary logic while still keeping it running on a common ledger </li>
+<li>Whether the potential adopter is looking to lower his/her costs: If the answer is YES, then once again a solution revolving around the blockchain would be of use since deploying a blockchain solution can help reduce overhead expenditure. This is done by significantly lowering transaction costs since cryptocurrency payments are handled in a peer to peer network with no centralized authority, which translates into lower merchant processing fees. </li>
+<li>Whether it is important that discoverability is improved: This can be done through a solution making use of the blockchain since every peer in the decentralized network has access to the same ledger, making it easy to broadcast an intention. </li>
+</ul>
+<aside class="special"><p>References used for this concept</p>
+<p>1.<a href="https://medium.com/@sbmeunier/when-do-you-need-blockchain-decision-models-a5c40e7c9ba1" target="_blank">https://medium.com/@sbmeunier/when-do-you-need-blockchain-decision-models-a5c40e7c9ba1</a> (You could check out the many other cool and interesting decision models that this blog post explores)</p>
+<p>2.<a href="https://www.inc.com/darren-heitner/how-blockchain-can-help-you-cut-down-on-costs.html#:~:text=Reduce%20your%20overhead%20costs.&text=Deploying%20a%20blockchain%20system%20in,and%20require%20no%20centralized%20verification." target="_blank">https://www.inc.com/darren-heitner/how-blockchain-can-help-you-cut-down-on-costs.html#:~:text=Reduce%20your%20overhead%20costs.&amp;text=Deploying%20a%20blockchain%20system%20in,and%20require%20no%20centralized%20verification.</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Blockchain Use Cases: Issuing and Verifying Digital Certificates" duration="20">
+        <aside class="warning"><p>Terms </p>
+<p>Merkle Tree -  a <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)" target="_blank">tree</a> in which every <a href="https://en.wikipedia.org/wiki/Leaf_node" target="_blank">leaf node</a> is labelled with the <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function" target="_blank">cryptographic hash</a> of a data block, and every non-leaf node is labelled with the cryptographic hash of the labels of its child nodes.</p>
+</aside>
+<p>This information presented in this section is obtained from the paper: Issuing and Verifying Digital Certificates with Blockchain, which can be accessed <a href="https://ieeexplore.ieee.org/document/8587428" target="_blank">here</a>. </p>
+<p>The problem: </p>
+<ul>
+<li>Counterfeit certificates being issued </li>
+<li>Lengthy process involving the verification of a large number of certificates </li>
+</ul>
+<p>The solution that is being proposed: UniCert (Based on UniCoin, a digital currency built on blockchain technology)</p>
+<p>Existing solution: Blockcert</p>
+<ul>
+<li>What it does: Joins the Bitcoin network and makes use of its transaction structure to maintain certificate records.</li>
+<li>Why use the Bitcoin network: Transparency and Availability </li>
+<li>Potential Drawbacks: </li>
+<li>By tying itself to the Bitcoin network, it also ties itself to the Bitcoin market at fluctuating rates resulting in the issuing of certificates to become unpredictable. </li>
+<li>With the scale of the Bitcoin network increasing, it becomes more expensive for new nodes to join the network due to expensive fees.</li>
+</ul>
+<p>How does UniCerts work?:</p>
+<p><strong>Step 1: </strong>Collection of necessary information for the certification process</p>
+<p><strong>Step 2:</strong> Hashing of the certificate and storing it in the metadata of the transaction. The hashing is carried out using the Merkle Tree hashing algorithm </p>
+<p><strong>Step 3:</strong> Pushing of transactions into UniCerts thereby letting it join the validation process</p>
+<p><strong>Step 4: </strong>Receiving the certificate&#39;s hash as an identity number once the transaction validations is complete </p>
+<p><strong>Step 5: </strong>Retrieving the original certificate wherever necessary which requires the identity number </p>
+<p>How does this address the existing issues revolving around the current system:</p>
+<ul>
+<li>It prevents counterfeit certificates from being issued since all the certificates that are validated through the system and a unique identity is provided to determine the validity of these referenced certificates.</li>
+<li>The lengthy validation is shortened since the entire process happens by pushing transactions into UniCerts rather than going through a centralised authority overseeing the entire process of issuing these certificates. </li>
+</ul>
+<p>At this point, you are highly encouraged to go back and do your own teardown of the paper and understand the UniCerts and UniCoin architecture by yourself! This section covers the rough overview of the project and does not go into the architecture. </p>
+<p>Other exciting blockchain focused solutions to this problem that you are encouraged to check out are: <a href="https://0xcert.org/news/certificates-and-licences/" target="_blank">0xcert</a> and  <a href="https://opencerts.io/" target="_blank">OpenCerts</a>. </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Review of some important academic papers" duration="60">
+        <aside class="special"><p>If you see an italicized term or phrase, this means that it is a key word that you could dive deeper into quite easily. Do take the time to Google them for the definitions if you need to jog your memory.</p>
+</aside>
+<p>In this section we&#39;ll do a simple teardown on two important academic papers: </p>
+<ol type="1" start="1">
+<li> <a href="https://arxiv.org/abs/1909.12454" target="_blank">SoK: Blockchain Technology and Its Potential Use Cases</a> - even though it is currently a draft, the paper is comprehensive in breaking down the comparative benefits of utilising blockchain technology</li>
+<li> <a href="https://www.ieee-security.org/TC/SP2015/papers-archived/6949a104.pdf" target="_blank">SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies</a>. </li>
+</ol>
+<aside class="warning"><p>Terms </p>
+<p>SoK - stands for Systematization of Knowledge (SoK), they are known as review papers  and serve as excellent launchpads to dive deep into a particular field.</p>
+<p>SHA-256 - set of cryptographic hash functions designed by the United States National Security Agency</p>
+<p>Blockchain Compliance - refer to <a href="https://medium.com/@SolidusLabs/what-do-you-actually-mean-when-you-say-blockchain-compliance-b77fcce0cae4" target="_blank">this article</a></p>
+</aside>
+<h2 is-upgraded>SoK: Blockchain Technology and Its Potential Use Cases (2019)</h2>
+<p>Ruoti, S., Kaiser, B., Yerukhimovich, A., Clark, J., &amp; Cunningham, R. (2019). SoK: Blockchain technology and its potential use cases. <em>arXiv preprint arXiv:1909.12454</em>.</p>
+<h3 is-upgraded>Abstract</h3>
+<p>This paper mainly aims to answer the questions:</p>
+<ul>
+<li>What exactly is Blockchain technology?</li>
+<li>What capabilities does it provide?</li>
+<li>What are good applications for Blockchain technology?</li>
+<li> How does it relate to other distributed technologies [Such as distributed databases]?</li>
+</ul>
+<p>It uses <em>grounded theory</em> to achieve this, identifying data and processes within qualitative data sources generated by humans and filled with imprecise terminology and descriptions.</p>
+<h3 is-upgraded>Key Contributions</h3>
+<p class="image-container"><img style="width: 463.98px" src="img\580a04162a4b8063.png"></p>
+<p>The technical properties for Blockchain Technology are defined which form the basis for its capabilities. Through participation in the <strong>shared governance and operations</strong> of the system, the group of individuals can be rest assured that the system is being operated properly. This is guaranteed through the validation rules which culminate in the consensus protocol for the distributed ledger.</p>
+<p>The distributed ledger provides a <strong>verifiable state</strong> for the participants which accurately reflect their transactions.</p>
+<p>It also provides <strong>resilience to data loss</strong> by providing redundancy.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\e033c4f9042bc602.png"></p>
+<p>Blockchain Technology is commonly touted to have several different capabilities. This figure helps us make sense of the technical properties and primitives that lead to these capabilities. Blockchain&#39;s 3 core capabilities are the <strong>shared governance and operations</strong>, <strong>verifiable state</strong>, and <strong>resilience to data loss</strong>. An additional 11 capabilities are identified that can be achieved on or off-chain. Blockchain use cases develop from the creation of value from these capabilities.</p>
+<p class="image-container"><img style="width: 624.00px" src="img\43354403db4ecbe0.png"></p>
+<p>You might then be wondering to yourself how does blockchain compare to other types of decentralized databases. This paper provides a flowchart that helps you to understand this based on 4 key questions. </p>
+<ul>
+<li>The <strong>operational model</strong> if the database is shared or not; </li>
+<li>The <strong>root of trust</strong> for the database grounding it in either the maintainer or the system</li>
+<li>Whether the database is <strong>auditable</strong> in terms of its provenance; and</li>
+<li>What the database is <strong>resilient against</strong> by looking at how it might prevent or detect data loss.</li>
+</ul>
+<p class="image-container"><img style="width: 624.00px" src="img\e7ccd5ff38f8be77.png"></p>
+<p>Finally, the paper illustrates some normative properties for Blockchain Technology and illustrates the dependencies to achieve these properties. However, the paper also provides a sobering reminder of the reality of some of these properties.</p>
+<p><em>While public participation is certainly possible with Blockchain technology, as there are many examples of systems built using Blockchain technology that fail to achieve these properties. For example, while Bitcoin initially had a low-cost to participate allowing easy-of-entry for miners and community ownership, that is no longer the case as any meaningful participation requires the purchase of a large amount of specialized hardware and the expenditure of a significant amount of electricity.</em></p>
+<p>To conclude, here&#39;s an enumeration of the different use cases for blockchain technology:</p>
+<ol type="1" start="1">
+<li>Financial</li>
+</ol>
+<ol type="1" start="1">
+<li>Electronic currencies and payments</li>
+<li>Asset trading</li>
+<li>Markets and auctions</li>
+<li>Insurance and futures</li>
+<li>Penalties, remedies, and sanctions</li>
+</ol>
+<ol type="1" start="2">
+<li>Data storage and sharing</li>
+</ol>
+<ol type="1" start="1">
+<li>Asset tracking</li>
+<li>Identity and key management</li>
+<li>Multi-organization data sharing</li>
+<li>Tamper-resistant record storage</li>
+</ol>
+<ol type="1" start="3">
+<li>Others</li>
+</ol>
+<ol type="1" start="1">
+<li>Voting</li>
+<li>Gambling and games</li>
+<li>IoT and smart property</li>
+</ol>
+<p>These use cases apply a combination of the normative properties of blockchain and its core capabilities. A full explanation is given in the paper and it generally follows the format of use case &gt; challenge at hand &gt; core capability helping to resolve the challenge &gt; limitations.</p>
+<h2 is-upgraded>SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies (2015)</h2>
+<p>SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies. 2015. 104-121. 10.1109/SP.2015.14. </p>
+<p>Abstract</p>
+<p>This paper:</p>
+<ul>
+<li>Provides a systematic exposition of Bitcoin and other ‘altcoins&#39;</li>
+<li>Identifies three major components of Bitcoin</li>
+<li>Maps out the design space for proposed modifications </li>
+<li>Survey anonymity issues in Bitcoin</li>
+<li>Provides new insights on disintermediation protocols </li>
+</ul>
+<p>One point that we find quite interesting is that this is a pre-ethereum paper which was published in 2015</p>
+<p>Now we will break down some of the key phrases that the paper highlights which will form the backbone for further research studies.</p>
+<ul>
+<li><strong>Simple majority compliance may not ensure fairness</strong></li>
+<li>Temporary withholding block withholding can allow miners who are two blocks ahead of the largest publicly known chain to publish the withheld block without any opposition. </li>
+<li><strong>Majority compliance is an equilibrium with perfect information</strong></li>
+<li>On analysing a simplified model where miners have perfect information about all published blocks, it is found that universal compliance is a <em>Nash equilibrium</em>. </li>
+<li><strong>Majority compliance implies convergence, consensus, and liveness</strong></li>
+<li>With a majority of the miners working compaintly it can be shown that a single, longest correct chain can easily emerge. When the original <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">Bitcoin paper </a>modeled a malicious miner looking to reverse a transaction by building an alternate chain faster than the honest chain, it was shown that this miner would eventually lose this race to the network.  </li>
+<li><strong>With a majority miner, stability is not guaranteed</strong></li>
+<li>A single non-compliant miner that controls the majority of the network could undermine fairness by:</li>
+<li>Collecting all block rewards</li>
+<li>Arbitrarily censoring transactions  </li>
+<li>Introducing arbitrarily long forks in the blockchain </li>
+<li><strong>If miners can collude, stability is not known</strong></li>
+<li>Even with the absence of a miner that controls the majority of the network&#39;s mining resources, a group of individual miners can collude and form cartels that control the majority of the mining power.</li>
+<li><strong>Stability is not known as mining rewards decline</strong></li>
+<li>All of these results have used a simplified model in which each block carries a constant, fixed reward fee. The planned transition of miner revenue from block rewards to transaction fees will negate this assumption and require more complex models which take into account the distribution of available transaction fees.</li>
+</ul>
+<p>We will now go over the two strategies that give miners, who don&#39;t purely derive utility only through mining rewards, an advantage.</p>
+<ul>
+<li>Gold-Finger attack: </li>
+<li>Majority Miner&#39;s Goal: To explicitly attack Bitcoin&#39;s security and destroy its utility as a currency</li>
+<li>These attacks have already been observed thorough what has been known as altcoin infanticide: Deep forking attacks in new, competing currencies which has been successfully launched by Bitcoin miners</li>
+<li>Feather Forking: </li>
+<li>Majority Miner&#39;s Goal: To censor a blacklist of transactions </li>
+<li>This is done by the miner by publicly promising that the blacklisted transaction which has been included in the blockchain will be intentionally ignored by the attacker who would attempt to fork the blockchain.</li>
+</ul>
+<p>In this section, for this paper we have just summarized and broken down what we believe are potential research questions that this paper highlights. You are highly encouraged to read the original paper and do a breakdown of your own. </p>
+<h3 is-upgraded>A Technical Overview of Bitcoin</h3>
+<ul>
+<li>Sources of information on Bitcoin: Good overview presented in the <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">original whitepaper</a>. Knowledge on current implementation: <a href="https://github.com/bitcoin/bips" target="_blank">Bitcoin Improvement Proposals</a>, <a href="https://en.bitcoin.it/wiki/Main_Page" target="_blank">Wiki</a> articles, <a href="https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev" target="_blank">Developers Mailing Lists</a>, Logged Bitcoin <a href="https://en.bitcoin.it/wiki/IRC_channels" target="_blank">IRC Discussions</a>.</li>
+<li>Transactions and Scripts</li>
+<li>Transaction Format: an array of inputs and an array of outputs hashed using SHA-256. This hash: Unique transaction ID</li>
+<li>Transaction Scripts: &#34;pay-to-pub-key-hash&#34; refers to a hash of the public key and a signature validation routine. Opcodes is the <em>ad-hoc</em>, <em>non-turing complete stack scripting language</em> that is used.</li>
+<li>Conservation of Value: Transactions are valid only if they satisfy the constraint of the sum of values of transaction inputs being less than or equal to the sum of the values of all the inputs.</li>
+<li>Transaction to Ownership: The concept of ownership of Bitcoins is different from that of traditional assets. An owner: Someone who knows a private key that can make a signature that redeems certain outputs.</li>
+<li>Consensus and Mining:</li>
+<li>Nakamoto Consensus: (Details out the process involved in choosing a new block) </li>
+<li>The first announced valid block containing the solution to a computational puzzle is considered correct, following which other participants (referred to as miners) should start working towards finding a follow up block. </li>
+<li>Malformed blocks and those with invalid transactions are meant to be rejected by the participants.</li>
+<li>At any given point in time the consensus blockchain: longest chain. <em>Finding the solution at the same time leads to temporary forking of the main chain with two chains of equal length</em>.</li>
+<li>Block conformations: Due to the possibility of forking of the main chain, users need to wait for 6 blocks to be found to confirm that their transaction would be permanently included in the blockchain. The choice of 6 has been set arbitrarily.</li>
+<li>Incentivising correct behaviour: Any miner who is able to find the correct solution to the computational hash problem gets a<em> block reward</em>. This gives miners an incentive to work only on valid blocks (What is valid is determined by the majority of other miners)</li>
+<li>Mining details: The puzzle is to find a block (consisting of a list of transactions, hash of the previous block, timestamp, version no. and a nonce) whose SHA-256 hash is less than a target value.</li>
+<li>Can be modeled as a problem to find a hash that starts with d consecutive zeros</li>
+<li>The standard strategy: Simply try random nonces</li>
+<li>Mining rewards: The size of the block reward is determined by a fixed schedule. It was initially set to 50 Bitcoin and is set to half every 4 years. Most miners also profit from transaction fees that users add to their transaction to ensure a higher probability of their transaction being included in the next block.</li>
+<li>Mining pools: In practice, many miners collaborate and form certain mining pools to lower the variance of their rewards by sharing rewards with a group of other miners. This is a threat to Bitcoin&#39;s decentralization. </li>
+<li>Peer to peer communication network:</li>
+<li>Impact on consensus: Performance and stability of the network has an impact on the consensus protocol</li>
+<li>Latency between block discovery and its receipt by all other nodes increases the chances of a temporary fork.</li>
+<li>A malicious node who is able to control the majority of the network can favour the broadcast of their own blocks.</li>
+<li>Network topology and discovery: Any node can join the network by connecting to a random sample of other nodes. By default, each node attempts to make 8 outgoing connections and is prepared to receive up to 125 incoming connections. Bitcoin makes use of seed nodes to allow peers to find out about other peers in the network.</li>
+<li>Communication Protocol: New blocks and pending transactions are broadcast to the entire network by flooding.</li>
+<li>INV messages: Sent by nodes to all other peers containing hashes of new blocks and pending transactions </li>
+<li>GETDATA messages: Peers can request the content of these new blocks and transactions </li>
+<li>Replay policy: Bitcoin has a set of stricter validation rules when compared to general transaction validity rules to decide what transactions and blocks can be a relayed to the network. This is done in order to prevent denial of service attacks. </li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Further opportunities" duration="5">
+        <p>The University ecosystem in Singapore, our <a href="https://blockchainresearchcollective.github.io/" target="_blank">blockchain research collective</a>.</p>
+<p>The blockchain industry in Singapore, <a href="https://opennodes.com/" target="_blank">OpenNodes</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Next Steps" duration="0">
+        <p>Congratulations! You have reached the end of this guide.</p>
+<aside class="warning"><p>This is the first time we&#39;re putting together a guide like this as a community.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
